@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class Gmaemgr : MonoBehaviour
 {
     public Text talkText;
+    int textcount;
     void Start()
     {
+
     }
 
     // Update is called once per frame
