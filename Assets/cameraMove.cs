@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class cameraMove : MonoBehaviour
 {
+    // Start is called before the first frame update
     Rigidbody2D rb;
-    public float speed;
+    public int speed = -3;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
