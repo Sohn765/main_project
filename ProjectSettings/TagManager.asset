@@ -13,6 +13,8 @@ TagManager:
   - warning2
   - 3floorGo
   - computerGo
+  - girl
+  - gameplay
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class move : MonoBehaviour
 {
     public float Speed;
     float moveX,moveY;
     Rigidbody2D rb;
-    GameObject player;
     Animator animator;
     SpriteRenderer src;
+    public GameObject boy,girl,mainTalk,playgame;
+    public int talkend;
+
+
 
 
 
@@ -44,6 +48,15 @@ public class move : MonoBehaviour
         if (collision.gameObject.tag == "computerGo")
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        }
+        if(collision.gameObject.tag == "girl")
+        {
+            mainTalk.SetActive(true);
+            boy.SetActive(false);
+        }
+        if (collision.gameObject.tag == "gameplay" && talkend == 1)
+        {
+            playgame.SetActive(true);
         }
     }
 
