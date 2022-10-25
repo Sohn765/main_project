@@ -37,6 +37,14 @@ public class move : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         }
+        if (collision.gameObject.tag == "3floorGo")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+        }
+        if (collision.gameObject.tag == "computerGo")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        }
     }
 
 

@@ -10,6 +10,9 @@ TagManager:
   - poster
   - 2floorGo
   - warning
+  - warning2
+  - 3floorGo
+  - computerGo
   layers:
   - Default
   - TransparentFX
