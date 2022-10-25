@@ -8,28 +8,34 @@ public class move : MonoBehaviour
     float moveX,moveY;
     Rigidbody2D rb;
     GameObject player;
+    Animator animator;
+    SpriteRenderer src;
+
 
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        src = gameObject.GetComponent<SpriteRenderer>();
     }
 
 
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-        transform.Translate(new Vector2(moveX, moveY) * Time.deltaTime * Speed);
-
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");
+        rb.velocity = new Vector2(moveX*Speed,moveY*Speed);
+        animator.SetFloat("moveX", Mathf.Abs(moveX));
+        animator.SetFloat("moveY", moveY);
+        if (moveX == -1) src.flipX = false;
+        if (moveX == 1) src.flipX = true;
     }
-
-    private void OntiggerEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "player")
+        if(collision.gameObject.tag == "2floorGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         }
     }
 

@@ -8,6 +8,8 @@ TagManager:
   - stageUp
   - find
   - poster
+  - 2floorGo
+  - warning
   layers:
   - Default
   - TransparentFX

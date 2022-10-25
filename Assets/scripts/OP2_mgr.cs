@@ -11,7 +11,7 @@ public class OP2_mgr : MonoBehaviour
     public GameObject show, talkmgr;
     public Text talk;
     Animator Animator;
-    public int runclickX, runclickY;
+    public int runcheckX, runcheckY;
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -24,13 +24,13 @@ public class OP2_mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (speedY != 0) runclickY = 1;
-        else runclickY = 0;
-        if (speedX != 0) runclickX = 1;
-        else runclickX = 0;
+        if (speedY != 0) runcheckY = 1;
+        else runcheckY = 0;
+        if (speedX != 0) runcheckX = 1;
+        else runcheckX = 0;
         rb.velocity = new Vector2(speedX, speedY);
-        if (runclickX == 1) Animator.SetFloat("down", Mathf.Abs(speedY));
-        if(runclickX == 1) Animator.SetFloat("right", Mathf.Abs(speedX));
+        if (runcheckX == 1) Animator.SetFloat("down", Mathf.Abs(speedY));
+        if(runcheckX == 1) Animator.SetFloat("right", Mathf.Abs(speedX));
         if(speedY == 1) Animator.SetFloat("up", Mathf.Abs(speedY));
     }
     private void OnCollisionEnter2D(Collision2D collision)

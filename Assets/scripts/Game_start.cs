@@ -20,4 +20,5 @@ public class Game_start : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
+    
 }
