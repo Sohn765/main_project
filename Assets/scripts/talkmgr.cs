@@ -25,12 +25,14 @@ public class talkmgr : MonoBehaviour
         if(talkcount == 0)
         {
             mv.show.SetActive(false);
+            mv.talkmgr.SetActive(false);
             mv.speedX = 3;
             talkcount++;
         }
         else if (talkcount == 1)
         {
             mv.show.SetActive(false);
+            mv.talkmgr.SetActive(false);
             mv.speedX = mv.rb.velocity.x;
             mv.speedY = 1;
             talkcount++;

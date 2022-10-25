@@ -8,7 +8,7 @@ public class OP2_mgr : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody2D rb;
     public float speedX, speedY;
-    public GameObject show;
+    public GameObject show, talkmgr;
     public Text talk;
     Animator Animator;
     public int runclickX, runclickY;
@@ -18,6 +18,7 @@ public class OP2_mgr : MonoBehaviour
         speedX = rb.velocity.x;
         speedY = -1.5f;
         Animator = gameObject.GetComponent<Animator>();
+        talkmgr.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,16 +40,19 @@ public class OP2_mgr : MonoBehaviour
             speedY = rb.velocity.y;
             talk.text = "확실히 방과후라 그런지 사람이 없네";
             show.SetActive(true);
+            talkmgr.SetActive(true);
         }
         else if(collision.gameObject.tag == "find")
         {
             speedX = rb.velocity.x;
             show.SetActive(true);
+            talkmgr.SetActive(true);
             talk.text = "어! 저게 뭐지?";
         }
         else if (collision.gameObject.tag == "poster")
         {
             show.SetActive(true);
+            talkmgr.SetActive(true);
             talk.text = "아하 게임프로젝트 대회를 하네?";
             Animator.SetFloat("stop", 1);
         }

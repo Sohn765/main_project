@@ -14,6 +14,8 @@ public class OP_playerMove : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         moveX = rb.velocity.x;
+
+
     }
 
     // Update is called once per frame
