@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OP_idle
+  m_Name: OP_idle-LAPTOP-ERK0K4V1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 1f59396dbfb8e6644b1f2dde91ee8e8f, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: 1f59396dbfb8e6644b1f2dde91ee8e8f, type: 3}
+      value: {fileID: 21300000, guid: 6175241400b3fa94e8fd1fdc6a4af19b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,7 +43,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 1f59396dbfb8e6644b1f2dde91ee8e8f, type: 3}
-    - {fileID: 21300000, guid: 1f59396dbfb8e6644b1f2dde91ee8e8f, type: 3}
+    - {fileID: 21300000, guid: 6175241400b3fa94e8fd1fdc6a4af19b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
