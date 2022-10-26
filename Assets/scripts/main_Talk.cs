@@ -12,6 +12,7 @@ public class main_Talk : MonoBehaviour
     void Start()
     {
         talkcount = 0;
+        Text.text = "어? 안녕 우현아";
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class main_Talk : MonoBehaviour
     {
         if (talkcount == 0)
         {
-            Text.text = "어? 우현아 여긴 어쩐일이야?";
+            Text.text = "여긴 어쩐일이야?";
             talkcount++;
         }
         else if (talkcount == 1)
@@ -87,6 +88,7 @@ public class main_Talk : MonoBehaviour
             main.boy.SetActive(false);
             main.girl.SetActive(false);
             main.mainTalk.SetActive(false);
+            main.talkmgr.SetActive(false);
             main.talkend = 1;
         }
 
