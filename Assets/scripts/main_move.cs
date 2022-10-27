@@ -26,6 +26,7 @@ public class main_move : MonoBehaviour
         rb.velocity = new Vector2(moveX * Speed, moveY * Speed);
         animator.SetFloat("moveX", Mathf.Abs(moveX));
         animator.SetFloat("moveY", moveY);
+        if (Input.GetKey(KeyCode.LeftShift)) Speed = 10;
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
     }
@@ -33,15 +34,15 @@ public class main_move : MonoBehaviour
     {
         if (collision.gameObject.tag == "2floorGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
         }
         if (collision.gameObject.tag == "3floorGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         }
         if (collision.gameObject.tag == "computerGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         }
     }
 }

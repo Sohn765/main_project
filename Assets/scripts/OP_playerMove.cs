@@ -44,7 +44,7 @@ public class OP_playerMove : MonoBehaviour
         }
         if (collision.gameObject.tag == "stageUp")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
     }
 }

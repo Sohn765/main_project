@@ -50,7 +50,7 @@ public class talkmgr : MonoBehaviour
         }
         else if (talkcount == 4)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
 
 

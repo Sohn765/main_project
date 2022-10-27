@@ -13,10 +13,6 @@ public class move : MonoBehaviour
     public GameObject boy,girl,mainTalk,playgame,talkmgr;
     public int talkend;
 
-
-
-
-
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
