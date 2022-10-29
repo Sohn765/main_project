@@ -11,7 +11,7 @@ public class move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk;
-    public int talkend, npcCount;
+    public int talkend, npcCount, maintalkCount;
     public Text text;
     
 
@@ -42,6 +42,7 @@ public class move : MonoBehaviour
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);
+            maintalkCount++;
             Time.timeScale = 0;
         }
         if (collision.gameObject.tag == "gameplay" && talkend == 1)

@@ -22,7 +22,7 @@ public class main_Talk : MonoBehaviour
   
     private void OnMouseDown()
     {
-        if (talkcount == 0)
+        if (main.maintalkCount== 1 && talkcount == 0)
         {
             AudioSource.Play();
             Text.text = "여긴 어쩐 일이야?";
@@ -108,6 +108,7 @@ public class main_Talk : MonoBehaviour
         {
             main.npc_Talk.SetActive(false);
             main.talkmgr.SetActive(false);
+            main.npcCount--;
         }
     }
 
