@@ -2000,6 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   button: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &920360640
 GameObject:
   m_ObjectHideFlags: 0

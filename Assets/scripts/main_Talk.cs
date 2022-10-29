@@ -10,6 +10,8 @@ public class main_Talk : MonoBehaviour
     public move main;
     public BoxCollider2D girlgirl;
     public AudioSource AudioSource; 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +19,7 @@ public class main_Talk : MonoBehaviour
         Text.text = "어? 안녕 우현아";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     private void OnMouseDown()
     {
         if (talkcount == 0)
@@ -106,6 +104,12 @@ public class main_Talk : MonoBehaviour
             girlgirl.isTrigger = true;
         }
 
+        if (main.npcCount == 1)
+        {
+            main.npc_Talk.SetActive(false);
+            main.talkmgr.SetActive(false);
+        }
     }
+
 
 }

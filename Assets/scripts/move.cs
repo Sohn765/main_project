@@ -10,8 +10,10 @@ public class move : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
-    public GameObject boy,girl,mainTalk,playgame,talkmgr;
-    public int talkend;
+    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk;
+    public int talkend, npcCount;
+    public Text text;
+    
 
     void Start()
     {
@@ -46,8 +48,17 @@ public class move : MonoBehaviour
         {
             playgame.SetActive(true);
         }
-    }
 
+        if (collision.gameObject.tag == "npc1")
+        {
+            npc_Talk.SetActive(true);
+            text.text = "집에 보내 주세요";
+            npcCount++;
+            talkmgr.SetActive(true);
+
+        }
+
+    }
 
 
 }
