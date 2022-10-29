@@ -24,7 +24,6 @@ public class OP_playerMove : MonoBehaviour
         rb.velocity = new Vector2(moveX, moveY);
         if (moveY == -1)
         {
-            print("엄");
             anim.SetFloat("left", Mathf.Abs(moveY));
         }
         if(moveX == 1)
@@ -38,7 +37,6 @@ public class OP_playerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "stop")
         {
-            print("충돌 작동확인");
             moveY = rb.velocity.y;
             moveX = 1;
         }

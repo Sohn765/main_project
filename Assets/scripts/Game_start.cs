@@ -7,6 +7,7 @@ public class Game_start : MonoBehaviour
 {
     public Image image;
     public GameObject button;
+    public GameObject text;
     void Start()
     {
         
@@ -22,6 +23,7 @@ public class Game_start : MonoBehaviour
     {
         print("버튼클릭");
         button.SetActive(false);
+        text.SetActive(false);
         StartCoroutine(FadeCoroutine());
     }
     IEnumerator FadeCoroutine()
