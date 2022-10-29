@@ -17,6 +17,6 @@ public class playgame : MonoBehaviour
     }
     public void gameplay()
     {
-           UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+           UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
 }

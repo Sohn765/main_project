@@ -1393,6 +1393,7 @@ MonoBehaviour:
   Text: {fileID: 564979787}
   talkcount: 0
   main: {fileID: 1445543883}
+  girlgirl: {fileID: 121709122}
 --- !u!61 &320937830
 BoxCollider2D:
   m_ObjectHideFlags: 0

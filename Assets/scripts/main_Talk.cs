@@ -8,6 +8,7 @@ public class main_Talk : MonoBehaviour
     public Text Text;
     public int talkcount;
     public move main;
+    public BoxCollider2D girlgirl;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +91,8 @@ public class main_Talk : MonoBehaviour
             main.mainTalk.SetActive(false);
             main.talkmgr.SetActive(false);
             main.talkend = 1;
+            Time.timeScale = 1;
+            girlgirl.isTrigger = true;
         }
 
     }

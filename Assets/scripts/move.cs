@@ -40,6 +40,7 @@ public class move : MonoBehaviour
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);
+            Time.timeScale = 0;
         }
         if (collision.gameObject.tag == "gameplay" && talkend == 1)
         {
