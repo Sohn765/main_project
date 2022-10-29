@@ -26,7 +26,7 @@ public class Gmaemgr : MonoBehaviour
         if(clickcount == 0)
         {
             zz.SetActive(true);
-            talkText.text = "아.. 내일 점심은 먹을게 없네 자판기나 가야겠다.";
+            talkText.text = "아... 내일 점심은 먹을 게 없네 자판기나 가야겠다";
             clickcount++;
         }
         
