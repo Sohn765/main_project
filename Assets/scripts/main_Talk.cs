@@ -110,6 +110,13 @@ public class main_Talk : MonoBehaviour
             main.talkmgr.SetActive(false);
             main.npcCount--;
         }
+
+        if (main.npcCount1 == 1)
+        {
+            main.npc_Talk1.SetActive(false);
+            main.talkmgr.SetActive(false);
+            main.npcCount1-=1;
+        }
     }
 
 
