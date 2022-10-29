@@ -9,6 +9,7 @@ public class warning : MonoBehaviour
     public Text text;
     public GameObject W,M;
     
+    
     void Start()
     {
         
@@ -26,7 +27,22 @@ public class warning : MonoBehaviour
             W.SetActive(true);
             M.SetActive(true);
             text.text = "여긴 가면 안 될 것 같다";
-
         }
+
+        if (collision.gameObject.tag == "warning11")
+        {
+            W.SetActive(true);
+            M.SetActive(true);
+            text.text = "잠긴 것 같다";
+        }
+
+        if (collision.gameObject.tag == "warning11")
+        {
+            W.SetActive(true);
+            M.SetActive(true);
+            text.text = "잠긴 것 같다";
+        }
+
+
     }
 }

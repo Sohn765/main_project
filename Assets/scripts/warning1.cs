@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class warning1 : MonoBehaviour
 {
-    // Start is called before the first frame update
     public warning warning;
+  
+
+   
+    // Start is called before the first frame update
+
     void Start()
     {
         warning.M.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -19,5 +24,6 @@ public class warning1 : MonoBehaviour
     private void OnMouseDown()
     {
         warning.W.SetActive(false);
+       
     }
 }
