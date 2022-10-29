@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class move : MonoBehaviour
 {
     public float Speed;
-    float moveX,moveY;
+    float moveX, moveY;
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
-    public GameObject boy,girl,mainTalk,playgame,talkmgr;
+    public GameObject boy, girl, mainTalk, playgame, talkmgr;
     public int talkend;
+
+
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class move : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(moveX*Speed,moveY*Speed);
+        rb.velocity = new Vector2(moveX * Speed, moveY * Speed);
         animator.SetFloat("moveX", Mathf.Abs(moveX));
         animator.SetFloat("moveY", moveY);
         if (moveX == -1) src.flipX = false;
@@ -34,8 +36,8 @@ public class move : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if(collision.gameObject.tag == "girl")
+
+        if (collision.gameObject.tag == "girl")
         {
             mainTalk.SetActive(true);
             boy.SetActive(false);
@@ -47,7 +49,8 @@ public class move : MonoBehaviour
             playgame.SetActive(true);
         }
     }
-
-
-
 }
+
+       
+
+

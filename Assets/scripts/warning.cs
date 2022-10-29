@@ -8,7 +8,8 @@ public class warning : MonoBehaviour
     // Start is called before the first frame update
     public Text text;
     public GameObject W,M;
-    
+   
+
     
     void Start()
     {
@@ -33,16 +34,9 @@ public class warning : MonoBehaviour
         {
             W.SetActive(true);
             M.SetActive(true);
-            text.text = "잠긴 것 같다";
+            text.text = "잠겨 있는 것 같다";
         }
 
-        if (collision.gameObject.tag == "warning11")
-        {
-            W.SetActive(true);
-            M.SetActive(true);
-            text.text = "잠긴 것 같다";
-        }
-
-
+       
     }
 }
