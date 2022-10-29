@@ -10,6 +10,7 @@ public class Gmaemgr : MonoBehaviour
     public GameObject zz;
     public int clickcount;
     public int speed;
+    public AudioSource clicksound;
     void Start()
     {
         clickcount = 0;
@@ -22,7 +23,7 @@ public class Gmaemgr : MonoBehaviour
     }
     private void OnMouseDown()
     {
-
+        
         if(clickcount == 0)
         {
             zz.SetActive(true);
@@ -35,7 +36,6 @@ public class Gmaemgr : MonoBehaviour
         {
             zz.SetActive(false);
             move.moveY = -1;
-            print("작동확인");
         }
         
     }
