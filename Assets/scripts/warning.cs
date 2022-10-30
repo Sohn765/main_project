@@ -40,5 +40,5 @@ public class warning : MonoBehaviour
         }
 
 
-    }
+    
 }
