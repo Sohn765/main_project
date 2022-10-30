@@ -33,7 +33,7 @@ public class Main_talk1 : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(true);
             main.girl.SetActive(false);
-            Text.text = "아니 게임 프로젝트 포스터를 봤는데 같이 할까 해서";
+            Text.text = "지나가다가 게임 프로젝트 포스터를 봤는데 같이 하고 싶어서";
             talkcount++;
         }
         else if (talkcount == 2)
@@ -50,7 +50,7 @@ public class Main_talk1 : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(true);
             main.girl.SetActive(false);
-            Text.text = "어 내가 기획한 게임이 있는데 니가 코딩을 맡아줬으면 해!";
+            Text.text = "어 내가 기획한 게임이 있는데 니가 코딩을 맡아줬으면 해";
             talkcount++;
         }
         else if (talkcount == 4)
@@ -74,7 +74,7 @@ public class Main_talk1 : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.girl.SetActive(true);
-            Text.text = "큰 건 아닌데 내가 옛날에 만든 게임을 평가해 줬으면 해!";
+            Text.text = "큰 건 아니고 내가 옛날에 만든 게임을 평가해 줘";
             talkcount++;
         }
         else if (talkcount == 7)
