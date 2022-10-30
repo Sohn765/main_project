@@ -57,7 +57,7 @@ public class move : MonoBehaviour
             npc_Talk.SetActive(true);
             talk.m_text = "선배 안녕하세요";
             npcCount++;
-
+            boy.SetActive(false);
             talk.game_text();
             npcCount1-=0;
             talkmgr.SetActive(true);
