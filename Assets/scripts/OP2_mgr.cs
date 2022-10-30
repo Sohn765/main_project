@@ -53,7 +53,7 @@ public class OP2_mgr : MonoBehaviour
         {
             show.SetActive(true);
             talkmgr.SetActive(true);
-            talk.text = "아하 게임프로젝트 대회를 하네?";
+            talk.text = "아 게임 프로젝트를 하네?";
             Animator.SetFloat("stop", 1);
         }
     }
