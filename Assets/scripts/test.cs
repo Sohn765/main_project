@@ -17,7 +17,7 @@ public class test : MonoBehaviour
     // Update is called once per frame
     IEnumerator _typing()
     {
-        for (int i = 0; i < m_text.Length; i++)
+        for (int i = 0; i <= m_text.Length; i++)
         {   
 
             tx.text = m_text.Substring(0, i);

@@ -55,7 +55,7 @@ public class move : MonoBehaviour
         if (collision.gameObject.tag == "npc1")
         {
             npc_Talk.SetActive(true);
-            talk.m_text = "집에가고 싶다.";
+            talk.m_text = "집에 가고 싶다";
             npcCount++;
 
             talk.game_text();
