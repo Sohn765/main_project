@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class main_Talk : MonoBehaviour
+public class Main_talk1 : MonoBehaviour
 {
     public Text Text;
     public int talkcount;
     public move main;
     public BoxCollider2D girlgirl;
-    public AudioSource AudioSource; 
-    
+    public AudioSource AudioSource;
+    public test talk;
+
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        Text.text = "안녕 우현아";
         talkcount = 0;
-        Text.text = "어? 안녕 우현아";
     }
 
-  
     private void OnMouseDown()
     {
-        if (main.maintalkCount== 1 && talkcount == 0)
+        if (main.maintalkCount == 1 && talkcount == 0)
         {
             AudioSource.Play();
             Text.text = "여긴 어쩐 일이야?";
@@ -100,7 +100,6 @@ public class main_Talk : MonoBehaviour
             main.mainTalk.SetActive(false);
             main.talkmgr.SetActive(false);
             main.talkend = 1;
-            Time.timeScale = 1;
             girlgirl.isTrigger = true;
         }
 
@@ -115,9 +114,7 @@ public class main_Talk : MonoBehaviour
         {
             main.npc_Talk1.SetActive(false);
             main.talkmgr.SetActive(false);
-            main.npcCount1-=1;
+            main.npcCount1 -= 1;
         }
     }
-
-
 }

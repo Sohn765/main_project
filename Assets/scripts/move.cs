@@ -13,7 +13,10 @@ public class move : MonoBehaviour
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1;
     public int talkend, npcCount,npcCount1, maintalkCount;
     public Text text, text1;
-    
+    public Main_talk1 main;
+    public test talk;
+
+
 
     void Start()
     {
@@ -42,8 +45,7 @@ public class move : MonoBehaviour
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);
-            maintalkCount++;
-            Time.timeScale = 0;
+            maintalkCount+=1;
         }
         if (collision.gameObject.tag == "gameplay" && talkend == 1)
         {
@@ -53,16 +55,16 @@ public class move : MonoBehaviour
         if (collision.gameObject.tag == "npc1")
         {
             npc_Talk.SetActive(true);
-            npc_Talk1.SetActive(false);
-            text.text = "집에 보내 주세요";
+            talk.m_text = "집에가고 싶다.";
             npcCount++;
+
+            talk.game_text();
             npcCount1-=0;
             talkmgr.SetActive(true);
 
         }
         if (collision.gameObject.tag == "npc2")
         {
-            npc_Talk.SetActive(false);
             npc_Talk1.SetActive(true);
             text1.text = "안녕하세요";
             npcCount1++;
