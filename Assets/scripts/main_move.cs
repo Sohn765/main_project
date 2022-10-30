@@ -44,5 +44,9 @@ public class main_move : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         }
+        if(collision.gameObject.tag == "musicGo")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(9);
+        }
     }
 }

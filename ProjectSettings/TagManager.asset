@@ -18,6 +18,7 @@ TagManager:
   - warning11
   - npc1
   - npc2
+  - musicGo
   layers:
   - Default
   - TransparentFX
