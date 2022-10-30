@@ -9,6 +9,7 @@ public class talkmgr : MonoBehaviour
     public Text talk;
     public OP2_mgr mv;
     public int talkcount;
+    
     void Start()
     {
         talkcount = 0;
@@ -52,6 +53,7 @@ public class talkmgr : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
+
 
 
     }
