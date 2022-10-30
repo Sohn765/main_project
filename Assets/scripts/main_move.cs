@@ -11,6 +11,7 @@ public class main_move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
 
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -46,7 +47,7 @@ public class main_move : MonoBehaviour
         }
         if(collision.gameObject.tag == "musicGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(9);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(10);
         }
     }
 }
