@@ -9,6 +9,7 @@ public class talkmgr : MonoBehaviour
     public Text talk;
     public OP2_mgr mv;
     public int talkcount;
+    public AudioSource talksource;
     void Start()
     {
         talkcount = 0;
@@ -24,6 +25,7 @@ public class talkmgr : MonoBehaviour
     {
         if(talkcount == 0)
         {
+            talksource.Play();
             mv.show.SetActive(false);
             mv.talkmgr.SetActive(false);
             mv.speedX = 3;
@@ -31,6 +33,7 @@ public class talkmgr : MonoBehaviour
         }
         else if (talkcount == 1)
         {
+            talksource.Play();
             mv.show.SetActive(false);
             mv.talkmgr.SetActive(false);
             mv.speedX = mv.rb.velocity.x;
@@ -39,12 +42,14 @@ public class talkmgr : MonoBehaviour
         }
         else if (talkcount == 2)
         {
+            talksource.Play();
             talk.text = "나도 친구들 모아서 신청해야겠다";
             talkcount++;
         }
 
         else if (talkcount == 3)
         {
+            talksource.Play();
             talk.text = "*한 번 더 버튼을 누르면 게임이 시작됩니다*";
             talkcount++;
         }
