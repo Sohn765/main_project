@@ -6224,6 +6224,7 @@ MonoBehaviour:
   talkmgr: {fileID: 320937827}
   npc_Talk: {fileID: 1582834268}
   npc_Talk1: {fileID: 717133143}
+  boy1: {fileID: 0}
   talkend: 0
   npcCount: 0
   npcCount1: 0

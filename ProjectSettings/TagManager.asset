@@ -19,6 +19,7 @@ TagManager:
   - npc1
   - npc2
   - musicGo
+  - boy1
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class main_move : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class main_move : MonoBehaviour
     SpriteRenderer src;
 
 
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -19,7 +21,7 @@ public class main_move : MonoBehaviour
         src = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal");
@@ -31,6 +33,10 @@ public class main_move : MonoBehaviour
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
     }
+
+    
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "2floorGo")
@@ -45,9 +51,14 @@ public class main_move : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         }
-        if(collision.gameObject.tag == "musicGo")
+        if (collision.gameObject.tag == "musicGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(11);
         }
+
     }
 }
+
+      
+
+

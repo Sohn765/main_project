@@ -10,8 +10,9 @@ public class move : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
-    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1;
-    public int talkend, npcCount,npcCount1, maintalkCount;
+
+    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1, boy1;
+    public int talkend, npcCount, npcCount1, maintalkCount;
     public Text text, text1;
     public Main_talk1 main;
     public test talk;
@@ -57,7 +58,7 @@ public class move : MonoBehaviour
             npc_Talk.SetActive(true);
             talk.m_text = "선배 안녕하세요";
             npcCount++;
-            boy.SetActive(false);
+            
             talk.game_text();
             npcCount1-=0;
             talkmgr.SetActive(true);

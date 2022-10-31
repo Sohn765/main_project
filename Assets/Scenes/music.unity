@@ -643,10 +643,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 164023004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff082099dc1048b4e9365dc4fba1ac21, type: 3}
+  m_Script: {fileID: 11500000, guid: 10e355914f29ea44597829d9708ae345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
+  boy: {fileID: 1712112408}
+  girl: {fileID: 0}
+  mainTalk: {fileID: 125645080}
+  playgame: {fileID: 173501172}
+  talkmgr: {fileID: 399795518}
+  npc_Talk: {fileID: 0}
+  npc_Talk1: {fileID: 0}
+  boy1: {fileID: 582522146}
+  talkend: 0
+  npcCount: 0
+  npcCount1: 0
+  maintalkCount: 0
+  text: {fileID: 0}
+  text1: {fileID: 0}
+  main: {fileID: 0}
+  talk: {fileID: 1480677227}
 --- !u!95 &164023009
 Animator:
   serializedVersion: 3
@@ -746,7 +762,7 @@ GameObject:
   - component: {fileID: 173501174}
   m_Layer: 5
   m_Name: explain
-  m_TagString: Untagged
+  m_TagString: gameplay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1148,12 +1164,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 399795518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 602269d9ef9df8647b63c1ca8829b2d2, type: 3}
+  m_Script: {fileID: 11500000, guid: a2260de8a09183a47ab199757bcab35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: {fileID: 2125440395}
-  mv: {fileID: 0}
+  Text: {fileID: 2125440395}
   talkcount: 0
+  main: {fileID: 164023008}
+  girlgirl: {fileID: 850198654}
+  AudioSource: {fileID: 164023005}
+  talk: {fileID: 1480677227}
 --- !u!61 &399795521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1438,7 +1457,7 @@ GameObject:
   - component: {fileID: 444199904}
   m_Layer: 0
   m_Name: GK_JS_Tiles_120
-  m_TagString: Untagged
+  m_TagString: musicGo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1687,7 +1706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582522147}
   m_Layer: 0
-  m_Name: UI_charGirl
+  m_Name: UI_charBoy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2343,7 +2362,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1466230341}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2649,7 +2668,7 @@ GameObject:
   - component: {fileID: 850198654}
   m_Layer: 0
   m_Name: Malepunk1
-  m_TagString: Untagged
+  m_TagString: girl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2921,7 +2940,7 @@ GameObject:
   - component: {fileID: 990111413}
   - component: {fileID: 990111412}
   m_Layer: 5
-  m_Name: girl_Name
+  m_Name: boy1_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3760,8 +3779,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -510.52084}
   m_LocalScale: {x: 0.006851853, y: 0.006851853, z: 0.006851853}
   m_Children:
-  - {fileID: 2125440394}
   - {fileID: 836629666}
+  - {fileID: 2125440394}
   m_Father: {fileID: 570459184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3861,6 +3880,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466230340}
   m_CullTransparentMesh: 1
+--- !u!1 &1480677226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480677228}
+  - component: {fileID: 1480677227}
+  m_Layer: 0
+  m_Name: gma..
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1480677227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480677226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f55fa79e3a2de44f879b80ca181a090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tx: {fileID: 0}
+  main_tx: {fileID: 0}
+  m_text: 
+  mv: {fileID: 0}
+--- !u!4 &1480677228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480677226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5549214, y: 2.9107602, z: 55.87722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496179536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,7 +5637,7 @@ GameObject:
   - component: {fileID: 1942162821}
   - component: {fileID: 1942162822}
   m_Layer: 0
-  m_Name: girl
+  m_Name: boy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5955,7 +6021,7 @@ GameObject:
   - component: {fileID: 2125440396}
   - component: {fileID: 2125440395}
   m_Layer: 5
-  m_Name: Text
+  m_Name: main_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5973,7 +6039,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1466230341}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
