@@ -75,7 +75,7 @@ public class music_talk : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.boy1.SetActive(true);
-            Text.text = "개연성 1";
+            Text.text = "알았어 그럼 나도 좀 도와줘";
             talkcount++;
         }
         else if (talkcount == 7)

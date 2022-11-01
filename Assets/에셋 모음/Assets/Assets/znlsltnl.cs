@@ -9,13 +9,9 @@ public class znlsltnl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            uiClear.SetActive(false);
+            Destroy(uiClear);
         }
         
     }
-
-
-
-
 
 }

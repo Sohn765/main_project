@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    public float speed = 0.1f;
-    public float jump = 5f;
+    public float moveX, moveY, Speed = 10f , addf;
+    public int jumpcount = 1;
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     public int count;
@@ -20,34 +20,33 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        moveX = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveX * Speed, rb.velocity.y);
+        if (jumpcount == 1)
         {
-            transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
-            sr.flipX = true;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            sr.flipX = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(new Vector2(0, jump),ForceMode2D.Impulse);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector2.up * addf, ForceMode2D.Impulse);
+                jumpcount = 0;
+            }
+
         }
         if (count == gameclear)
         {
             uiclear.SetActive(true);
             Time.timeScale = 0;
         }
-     
-        
-        
+        if (moveX == 1) sr.flipX = false;
+        if (moveX == -1) sr.flipX = true;
+
+
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "coin")
         {
-            count += 1;
+            count+=1;
         }
         
 
