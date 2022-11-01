@@ -11,10 +11,11 @@ public class player : MonoBehaviour
     public int count;
     public GameObject uiclear;
     public int gameclear;
+    Rigidbody2D rigid;
     // Start is called before the first frame update
     void Start()
     {
-     
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -22,14 +23,11 @@ public class player : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * Speed, rb.velocity.y);
-        if (jumpcount == 1)
+        
+        if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(Vector2.up * addf, ForceMode2D.Impulse);
-                jumpcount = 0;
-            }
-
+            rb.AddForce(Vector2.up * addf, ForceMode2D.Impulse);
+            jumpcount = 0;
         }
         if (count == gameclear)
         {
@@ -38,8 +36,19 @@ public class player : MonoBehaviour
         }
         if (moveX == 1) sr.flipX = false;
         if (moveX == -1) sr.flipX = true;
-
-
+        if(rigid.velocity.y < 0)
+        {
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            if (rayHit.collider != null)
+            {
+                if (rayHit.distance < 0.5f)
+                {
+                    jumpcount = 1;
+                }
+            }
+        }
+        
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,6 +56,8 @@ public class player : MonoBehaviour
         if (collision.gameObject.tag == "coin")
         {
             count+=1;
+            print("ÄÚÀÎ");
+
         }
         
 
