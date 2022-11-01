@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/coding_game.unity
     guid: d38f3b6ddd7390f44b717e1122bb426a
+  - enabled: 1
+    path: Assets/Scenes/music.unity
+    guid: bb381e0e1dd15d64ca5ea40312a23632
+  - enabled: 1
+    path: Assets/Scenes/sound_ingame.unity
+    guid: 25924e9ca5090fb4286786f355ea3a95
   m_configObjects: {}

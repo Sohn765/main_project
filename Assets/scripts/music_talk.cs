@@ -59,7 +59,7 @@ public class music_talk : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.boy1.SetActive(true);
-            Text.text = "오 재미있겠다 같이 해 줄까?";
+            Text.text = "아... 내가 있어야 해?";
             talkcount++;
         }
         else if (talkcount == 5)
@@ -83,7 +83,7 @@ public class music_talk : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(true);
             main.boy1.SetActive(false);
-            Text.text = "개연성 2";
+            Text.text = "뭘 도와 줘?";
             talkcount++;
         }
         else if (talkcount == 8)
@@ -91,7 +91,7 @@ public class music_talk : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.boy1.SetActive(true);
-            Text.text = "개연성 3";
+            Text.text = "애들한테 부탁받은 게임이 있는데 그거 깨면 해 줄게";
             talkcount++;
         }
         else if (talkcount == 9)
