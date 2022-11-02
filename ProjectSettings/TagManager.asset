@@ -21,6 +21,7 @@ TagManager:
   - musicGo
   - boy1
   - coin
+  - bang
   layers:
   - Default
   - TransparentFX
