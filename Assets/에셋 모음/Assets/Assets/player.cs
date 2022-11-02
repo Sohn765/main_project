@@ -7,9 +7,9 @@ public class player : MonoBehaviour
     public float moveX, moveY, Speed = 10f , addf;
     public int jumpcount = 1;
     public Rigidbody2D rb;
-    public SpriteRenderer sr;
-    public int count;
-    public GameObject uiclear;
+    public SpriteRenderer sr,dark, dark1;
+    public int count , incount = 0;
+    public GameObject uiclear,fake,real,tlie;
     public int gameclear;
     Rigidbody2D rigid;
     // Start is called before the first frame update
@@ -62,5 +62,68 @@ public class player : MonoBehaviour
         
 
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bang")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                fake.SetActive(true);
+            }
+        }
+        if (collision.gameObject.tag == "real")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                real.SetActive(true);
+                tlie.SetActive(false);
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "dark" ){
+            print("충돌!");
+            StartCoroutine(fadedark());
+        }
+        
 
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "dark")
+        {
+            print("충돌!");
+            StartCoroutine(fadeOutdark());
+        }
+    }
+    IEnumerator fadedark()
+    {
+        print("실행!");
+        float count = 1;
+        while(count > 0)
+        {
+            print("반복");
+            count -= 0.05f;
+            yield return new WaitForSeconds(0.01f);
+            dark.color = new Color(0, 0, 0, count);
+            dark1.color = new Color(0, 0, 0, count);
+
+        }
+    }
+    IEnumerator fadeOutdark()
+    {
+        print("실행!");
+        float count = 0;
+        while (count < 1.0f)
+        {
+            print("반복");
+            count += 0.05f;
+            yield return new WaitForSeconds(0.01f);
+            dark.color = new Color(255, 255, 255, count);
+            dark1.color = new Color(255, 255, 255, count);
+
+        }
+    }
 }

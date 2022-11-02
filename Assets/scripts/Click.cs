@@ -5,7 +5,7 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject GameObject;
+    public GameObject cut;
     void Start()
     {
         
@@ -16,8 +16,9 @@ public class Click : MonoBehaviour
     {
         
     }
-    public void click()
+    public void setout()
     {
-        gameObject.SetActive(false);
+        print("¾ö");
+        cut.gameObject.SetActive(false);
     }
 }
