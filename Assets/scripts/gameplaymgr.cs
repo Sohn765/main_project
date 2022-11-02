@@ -18,6 +18,6 @@ public class gameplaymgr : MonoBehaviour
 
     public void Gameplay()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(11);
     }
 }
