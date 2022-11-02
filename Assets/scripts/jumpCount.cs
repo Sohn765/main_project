@@ -16,15 +16,8 @@ public class jumpCount : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag== "player")
-        {
-            player.incount = 1;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        player.incount =0;
+        player.jumpcount = 1;
     }
 }
