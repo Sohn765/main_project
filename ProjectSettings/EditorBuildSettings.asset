@@ -29,16 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loading_Scene.unity
     guid: 9db758d0e8331fa41b2a16038f3b0e8e
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/coding_game 1.unity
+    guid: f3f7c7679d2574448974c63b8f3012d8
+  - enabled: 1
+    path: Assets/Scenes/coding_game 2.unity
+    guid: 1926b1ee03a259a41af62ee10bf8e45d
   - enabled: 1
     path: Assets/Scenes/music.unity
     guid: bb381e0e1dd15d64ca5ea40312a23632
   - enabled: 1
     path: Assets/Scenes/sound_ingame.unity
     guid: 25924e9ca5090fb4286786f355ea3a95
-  - enabled: 1
-    path: Assets/Scenes/coding_game 2.unity
-    guid: 1926b1ee03a259a41af62ee10bf8e45d
   m_configObjects: {}

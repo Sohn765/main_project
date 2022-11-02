@@ -16,6 +16,7 @@ public class player : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

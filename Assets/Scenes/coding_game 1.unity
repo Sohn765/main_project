@@ -187,7 +187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &52043946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5785,8 +5785,14 @@ MonoBehaviour:
   jumpcount: 1
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
+  dark: {fileID: 0}
+  dark1: {fileID: 0}
   count: 0
+  incount: 0
   uiclear: {fileID: 52043945}
+  fake: {fileID: 0}
+  real: {fileID: 0}
+  tlie: {fileID: 0}
   gameclear: 6
 --- !u!4 &334628917 stripped
 Transform:
