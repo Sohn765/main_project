@@ -22,6 +22,8 @@ TagManager:
   - boy1
   - coin
   - bang
+  - dark
+  - real
   layers:
   - Default
   - TransparentFX
