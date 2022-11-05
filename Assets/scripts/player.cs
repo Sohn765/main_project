@@ -9,7 +9,7 @@ public class player : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
     public int count , incount = 0;
-    public GameObject uiclear,fake,real,tlie,key;
+    public GameObject uiclear,fake,real,tlie,key, secretdoor;
     public int gameclear,keyCount;
     Rigidbody2D rigid;
     Animator animator;
@@ -71,7 +71,10 @@ public class player : MonoBehaviour
             key.SetActive(false);
             keyCount++;
         }
-
+        if(collision.gameObject.tag == "secretdoor" && keyCount == 1)
+        {
+            secretdoor.SetActive(false);
+        }
 
     }
     private void OnTriggerStay2D(Collider2D collision)
