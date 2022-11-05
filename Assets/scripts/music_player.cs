@@ -10,6 +10,8 @@ public class music_player : MonoBehaviour
     Rigidbody2D rb;
     Animator an;
     int playLayer, platformLayer;
+    public GameObject uigameClear;
+    public score main;
 
     // Start is called before the first frame update
     void Start()
@@ -55,5 +57,24 @@ public class music_player : MonoBehaviour
             
         }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            uigameClear.SetActive(true);
+        }
+
+        if (jumpcount == 1)
+        {
+            CancelInvoke("DoubleDown");
+            Application.Quit();
+        }
+
+        void DoubleDown()
+        {
+            jumpcount -=1;
+        }
     }
+
+}
 
