@@ -5300,12 +5300,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3026440bca5e048b939eda98998b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jump: 5
+  moveX: 0
+  moveY: 0
+  Speed: 10
+  addf: 0
+  jumpcount: 1
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
+  dark: {fileID: 0}
+  dark1: {fileID: 0}
   count: 0
+  incount: 0
   uiclear: {fileID: 2006241821}
+  fake: {fileID: 0}
+  real: {fileID: 0}
+  tlie: {fileID: 0}
   gameclear: 6
 --- !u!4 &334628917 stripped
 Transform:
@@ -6188,7 +6197,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7955,7 +7964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114532401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.771439, y: 0.87361646, z: -10}
+  m_LocalPosition: {x: -2.6732717, y: 0.8754544, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

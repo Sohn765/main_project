@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    public float moveX, moveY, Speed = 10f , addf;
+    public float moveX, moveY, Speed = 10f;
     public int jumpcount = 1;
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
@@ -12,11 +12,13 @@ public class player : MonoBehaviour
     public GameObject uiclear,fake,real,tlie;
     public int gameclear;
     Rigidbody2D rigid;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         Time.timeScale = 1;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,10 +26,13 @@ public class player : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * Speed, rb.velocity.y);
-        
+        animator.SetFloat("moveX", Mathf.Abs(moveX));
+        animator.SetFloat("moveY", Mathf.Abs(moveY));
+
         if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
         {
-            rb.AddForce(Vector2.up * addf, ForceMode2D.Impulse);
+            moveY = 7;
+            rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
             jumpcount = 0;
         }
         if (count == gameclear)
@@ -46,6 +51,7 @@ public class player : MonoBehaviour
                 if (rayHit.distance < 0.5f)
                 {
                     jumpcount = 1;
+                    moveY = 0;
                 }
             }
         }
