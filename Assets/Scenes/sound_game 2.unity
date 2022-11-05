@@ -881,7 +881,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 18.861006, y: 46.812683}
+  m_Size: {x: 18.861006, y: 39.88063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -895,7 +895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467538028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8250184, y: 10.1962, z: 23.594751}
+  m_LocalPosition: {x: -1.8250184, y: 13.6622, z: 23.594751}
   m_LocalScale: {x: 0.9502, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1300956553}
@@ -940,7 +940,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 27.4, y: 19.8}
-    newSize: {x: 18.861006, y: 46.812683}
+    newSize: {x: 18.861006, y: 39.88063}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 860199540}
   m_Layer: 0
   m_Name: outline
-  m_TagString: Untagged
+  m_TagString: outline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2594,9 +2594,9 @@ GameObject:
   - component: {fileID: 1386778235}
   - component: {fileID: 1386778239}
   - component: {fileID: 1386778238}
-  - component: {fileID: 1386778240}
   - component: {fileID: 1386778242}
   - component: {fileID: 1386778241}
+  - component: {fileID: 1386778240}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -2749,15 +2749,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386778234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f88e02231b1bee4e912e638b059c49a, type: 3}
+  m_Script: {fileID: 11500000, guid: aa68cddf5bffc2a49a526aeb9124c8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveX: 0
-  moveY: 0
-  jumpcount: 0
-  jumpPower: 0
-  uigameClear: {fileID: 329798148}
-  main: {fileID: 1386778241}
+  flashingBlink: {fileID: 20153535}
 --- !u!114 &1386778241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,7 +2762,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386778234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997610172591e7942b19af11769b5897, type: 3}
+  m_Script: {fileID: 11500000, guid: 4256dbf359ea338409229cab2aefdfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1936645590}
@@ -2781,10 +2776,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386778234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8421542bb3f4cc46912e4e775f35de3, type: 3}
+  m_Script: {fileID: 11500000, guid: e9322b220e570464e872a599ebc75796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashingBlink: {fileID: 20153535}
+  moveX: 0
+  moveY: 0
+  jumpcount: 0
+  blockcount: 0
+  jumpPower: 0
+  uigameClear: {fileID: 329798148}
+  main: {fileID: 1386778241}
 --- !u!1 &1398622289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,6 +3800,7 @@ GameObject:
   - component: {fileID: 1804202932}
   - component: {fileID: 1804202934}
   - component: {fileID: 1804202933}
+  - component: {fileID: 1804202935}
   m_Layer: 8
   m_Name: Platform_Uncolored (5)
   m_TagString: coin
@@ -3814,7 +3816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804202931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.05, y: 6.85, z: 0.6164398}
+  m_LocalPosition: {x: -0.9, y: 6.85, z: 0.6164398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 751862844}
@@ -3897,6 +3899,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1804202935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804202931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb9b937fe8fc59478359eecc38c0d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightmax: 6.5
+  leftmax: -8.3
 --- !u!1 &1894634101
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +4079,7 @@ GameObject:
   - component: {fileID: 1939837843}
   m_Layer: 0
   m_Name: outline (1)
-  m_TagString: Untagged
+  m_TagString: outline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -24,6 +24,10 @@ TagManager:
   - bang
   - dark
   - real
+  - Ladder
+  - Platform
+  - blink
+  - outline
   layers:
   - Default
   - TransparentFX
