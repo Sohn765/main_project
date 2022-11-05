@@ -7,7 +7,6 @@ public class score : MonoBehaviour
 {
     public Text Text;
     public int Score = 0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +25,10 @@ public class score : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "coin")
-        {
             Score++;
-        }
+
+         
+        
     }
 
 }

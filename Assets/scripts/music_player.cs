@@ -11,6 +11,7 @@ public class music_player : MonoBehaviour
     Animator an;
     int playLayer, platformLayer;
     public GameObject uigameClear;
+    public score main;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,18 @@ public class music_player : MonoBehaviour
         {
             uigameClear.SetActive(true);
         }
+
+        if (jumpcount == 1)
+        {
+            CancelInvoke("DoubleDown");
+            Application.Quit();
+        }
+
+        void DoubleDown()
+        {
+            jumpcount -=1;
+        }
     }
+
 }
 

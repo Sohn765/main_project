@@ -39,6 +39,12 @@ EditorBuildSettings:
     path: Assets/Scenes/music.unity
     guid: bb381e0e1dd15d64ca5ea40312a23632
   - enabled: 1
-    path: Assets/Scenes/sound_ingame.unity
-    guid: 25924e9ca5090fb4286786f355ea3a95
+    path: Assets/Scenes/sound_game.unity
+    guid: 7701607f24348cb4498f1b8daf1b5ea5
+  - enabled: 1
+    path: Assets/Scenes/sound_game 1.unity
+    guid: 99ad75dd44aa337488e94551f0093216
+  - enabled: 1
+    path: Assets/Scenes/sound_game 2.unity
+    guid: 888edfeee0a6c6743bef970ef2a0f6a2
   m_configObjects: {}
