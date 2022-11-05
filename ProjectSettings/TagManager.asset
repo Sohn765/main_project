@@ -26,6 +26,8 @@ TagManager:
   - real
   - point
   - key
+  - secretdoor
+  - randombox
   layers:
   - Default
   - TransparentFX

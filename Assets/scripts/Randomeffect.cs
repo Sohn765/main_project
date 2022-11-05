@@ -8,7 +8,7 @@ public class Randomeffect : MonoBehaviour
     public Sprite[] sprites = new Sprite[0];
     SpriteRenderer src;
     public RandomBox box;
-    public GameObject player,key , point1, point2,point3,point4;
+    public GameObject player,key , point1, point2,point3,point4 ,zz;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,10 @@ public class Randomeffect : MonoBehaviour
         else if (box.dlswk == 4)
         {
             player.transform.position = point4.transform.position;
+        }
+        else if (box.dlswk == 5)
+        {
+            zz.SetActive(true);
         }
         yield return new WaitForSeconds(1f);
         box.box.SetActive(true);
