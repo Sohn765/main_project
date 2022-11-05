@@ -6,37 +6,37 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1start 1.unity
+    path: Assets/opening/scenes/1start 1.unity
     guid: 63e33f58051b70f44bec2465ade3799b
   - enabled: 1
-    path: Assets/Scenes/OP1.unity
+    path: Assets/opening/scenes/OP1.unity
     guid: f9c66a17b66481345b3a5ae3d1d518f9
   - enabled: 1
-    path: Assets/Scenes/OP2.unity
+    path: Assets/opening/scenes/OP2.unity
     guid: f00f87969e979dc4884268f1a355d407
   - enabled: 1
-    path: Assets/Scenes/start3333.unity
+    path: Assets/mainmap/scenes/start3333.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/222222222.unity
+    path: Assets/mainmap/scenes/222222222.unity
     guid: e0d0c1e3f0a9457499968f166f9cc133
   - enabled: 1
-    path: Assets/Scenes/3333 1.unity
+    path: Assets/mainmap/scenes/3333 1.unity
     guid: 23f2f5d57d61da64da43b37ce69d24f0
   - enabled: 1
-    path: Assets/Scenes/npc.unity
+    path: Assets/mainmap/scenes/npc.unity
     guid: 309943ac9b5ac1a43b9ebe06790fb421
   - enabled: 1
     path: Assets/Scenes/Loading_Scene.unity
     guid: 9db758d0e8331fa41b2a16038f3b0e8e
   - enabled: 1
-    path: Assets/Scenes/coding_game 1.unity
+    path: Assets/coding_game/Scenes/coding_game 1.unity
     guid: f3f7c7679d2574448974c63b8f3012d8
   - enabled: 1
-    path: Assets/Scenes/coding_game 2.unity
+    path: Assets/coding_game/Scenes/coding_game 2.unity
     guid: 1926b1ee03a259a41af62ee10bf8e45d
   - enabled: 1
-    path: Assets/Scenes/music.unity
+    path: Assets/mainmap/scenes/music.unity
     guid: bb381e0e1dd15d64ca5ea40312a23632
   - enabled: 1
     path: Assets/Scenes/sound_game.unity

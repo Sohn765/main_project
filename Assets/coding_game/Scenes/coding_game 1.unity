@@ -5781,7 +5781,6 @@ MonoBehaviour:
   moveX: 0
   moveY: 0
   Speed: 5
-  addf: 7
   jumpcount: 1
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
@@ -5793,7 +5792,10 @@ MonoBehaviour:
   fake: {fileID: 0}
   real: {fileID: 0}
   tlie: {fileID: 0}
+  key: {fileID: 0}
+  secretdoor: {fileID: 0}
   gameclear: 6
+  keyCount: 0
 --- !u!4 &334628917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4469930281996236, guid: 63c74e18159d5cf4a8bce25adca0f18b, type: 3}
@@ -7430,7 +7432,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.9915943, y: 0.1692361}
   m_SpriteTilingProperty:
