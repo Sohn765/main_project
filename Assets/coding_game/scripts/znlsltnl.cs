@@ -10,9 +10,8 @@ public class znlsltnl : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(uiClear);
+
         }
         
     }
-
-
 }

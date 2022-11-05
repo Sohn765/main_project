@@ -29,7 +29,9 @@ public class main_move : MonoBehaviour
         rb.velocity = new Vector2(moveX * Speed, moveY * Speed);
         animator.SetFloat("moveX", Mathf.Abs(moveX));
         animator.SetFloat("moveY", moveY);
-        if (Input.GetKey(KeyCode.LeftShift)) Speed = 10;
+        if (Input.GetKeyDown(KeyCode.LeftShift)) Speed = 10;
+        if (Input.GetKeyUp(KeyCode.LeftShift)) Speed = 4;
+
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
     }

@@ -9,8 +9,8 @@ public class player : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
     public int count , incount = 0;
-    public GameObject uiclear,fake,real,tlie;
-    public int gameclear;
+    public GameObject uiclear,fake,real,tlie,key, secretdoor;
+    public int gameclear,keyCount;
     Rigidbody2D rigid;
     Animator animator;
     // Start is called before the first frame update
@@ -66,7 +66,15 @@ public class player : MonoBehaviour
             print("코인");
 
         }
-        
+        if (collision.gameObject.tag == "key")
+        {
+            key.SetActive(false);
+            keyCount++;
+        }
+        if(collision.gameObject.tag == "secretdoor" && keyCount == 1)
+        {
+            secretdoor.SetActive(false);
+        }
 
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -93,8 +101,6 @@ public class player : MonoBehaviour
             print("충돌!");
             StartCoroutine(fadedark());
         }
-        
-
 
     }
     private void OnTriggerExit2D(Collider2D collision)

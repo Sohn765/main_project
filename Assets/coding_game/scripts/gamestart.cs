@@ -15,4 +15,9 @@ public class gamestart : MonoBehaviour
     {
         
     }
+
+    public void next()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+    }
 }
