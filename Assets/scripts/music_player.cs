@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class music_player : MonoBehaviour
 {
-    public float moveX, moveY, jumpcount;
+    public float moveX, moveY, jumpcount, blockcount=0;
     public float jumpPower;
     Rigidbody2D rb;
     Animator an;
@@ -64,17 +64,8 @@ public class music_player : MonoBehaviour
             uigameClear.SetActive(true);
         }
 
-        if (jumpcount == 1)
-        {
-            CancelInvoke("DoubleDown");
-            Application.Quit();
         }
 
-        void DoubleDown()
-        {
-            jumpcount -=1;
-        }
-    }
 
 }
 

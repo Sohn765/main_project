@@ -24,10 +24,17 @@ TagManager:
   - bang
   - dark
   - real
+<<<<<<< HEAD
+  - Ladder
+  - Platform
+  - blink
+  - outline
+=======
   - point
   - key
   - secretdoor
   - randombox
+>>>>>>> 491f4d9fd67af782273deb29f532c2c7e20ca619
   layers:
   - Default
   - TransparentFX
