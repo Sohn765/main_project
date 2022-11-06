@@ -5782,6 +5782,7 @@ MonoBehaviour:
   moveY: 0
   Speed: 7
   jumpcount: 1
+  jumpPoleForce: 0
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
   dark: {fileID: 0}
@@ -5796,6 +5797,7 @@ MonoBehaviour:
   secretdoor: {fileID: 0}
   gameclear: 6
   keyCount: 0
+  jumpPole: {fileID: 0}
 --- !u!4 &334628917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4469930281996236, guid: 63c74e18159d5cf4a8bce25adca0f18b, type: 3}
@@ -8033,6 +8035,7 @@ GameObject:
   - component: {fileID: 1114532403}
   - component: {fileID: 1114532402}
   - component: {fileID: 1114532405}
+  - component: {fileID: 1114532406}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8139,6 +8142,26 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1114532406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114532401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 30
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1001 &1126109344
 PrefabInstance:
   m_ObjectHideFlags: 0

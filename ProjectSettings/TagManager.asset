@@ -9,6 +9,7 @@ TagManager:
   - secretdoor
   - key
   - outline
+  - jumpPole
   layers:
   - Default
   - TransparentFX
