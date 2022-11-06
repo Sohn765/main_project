@@ -16,30 +16,24 @@ public class yap : MonoBehaviour
     {
         
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine("block");
-            print("출력");
+            blockExit.SetActive(false);
         }
     }
-    public IEnumerator block()
-    {
-            yield return null;
-            blockExit.SetActive(false);
-            print("확인");
-             StartCoroutine("delay");
-        
-    }
 
-   
-            
-           
-            
-          
-        
-            
-    }
+
+
+
+
+
+
+
+
+
+}
   
 

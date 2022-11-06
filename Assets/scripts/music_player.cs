@@ -19,8 +19,6 @@ public class music_player : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         an = gameObject.GetComponent<Animator>();
 
-        playLayer = LayerMask.NameToLayer("player");
-        platformLayer = LayerMask.NameToLayer("Platform");
     }
 
     // Update is called once per frame
@@ -31,7 +29,7 @@ public class music_player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
         {
-            moveY = 10;
+            moveY = 13;
             rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
             jumpcount = 0;
         }
@@ -39,7 +37,7 @@ public class music_player : MonoBehaviour
         if (rb.velocity.y < 0)
         {
             Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down,1, LayerMask.GetMask("Platform"));
             if (rayHit.collider != null)
             {
                 if (rayHit.distance < 0.3f)
@@ -50,12 +48,7 @@ public class music_player : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y > 0)
-            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
-        else
-            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
-            
-        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -63,9 +56,8 @@ public class music_player : MonoBehaviour
         {
             uigameClear.SetActive(true);
         }
-
-        }
-
-
+    }
 }
+
+
 

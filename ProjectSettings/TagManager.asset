@@ -4,37 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - stop
-  - stageUp
-  - find
-  - poster
-  - 2floorGo
-  - warning
-  - warning2
-  - 3floorGo
-  - computerGo
-  - girl
-  - gameplay
-  - warning11
-  - npc1
-  - npc2
-  - musicGo
-  - boy1
   - coin
-  - bang
   - dark
-  - real
-<<<<<<< HEAD
-  - Ladder
-  - Platform
-  - blink
-  - outline
-=======
-  - point
-  - key
   - secretdoor
-  - randombox
->>>>>>> 491f4d9fd67af782273deb29f532c2c7e20ca619
+  - key
+  - outline
   layers:
   - Default
   - TransparentFX
@@ -42,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
+  - 
   - player
-  - ground
   - Platform
   - 
   - 
