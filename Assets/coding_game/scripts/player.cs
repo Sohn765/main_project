@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     public float moveX, moveY, Speed = 10f;
-    public int jumpcount = 1;
+    public int jumpcount = 1, jumpPoleForce;
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
     public int count , incount = 0;
@@ -13,7 +13,9 @@ public class player : MonoBehaviour
     public int gameclear,keyCount;
     Rigidbody2D rigid;
     Animator animator;
-    // Start is called before the first frame update
+
+
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -66,9 +68,14 @@ public class player : MonoBehaviour
             print("코인");
 
         }
+        if (collision.gameObject.tag == "jumpPole")
+        {
+            print("대점");
+            rb.AddForce(Vector2.up * jumpPoleForce, ForceMode2D.Impulse);
+        }
         if (collision.gameObject.tag == "key")
         {
-            key.SetActive(false);
+            Destroy(key);
             keyCount++;
         }
         if(collision.gameObject.tag == "secretdoor" && keyCount == 1)
@@ -111,6 +118,7 @@ public class player : MonoBehaviour
             StartCoroutine(fadeOutdark());
         }
     }
+
     IEnumerator fadedark()
     {
         print("실행!");
@@ -136,7 +144,6 @@ public class player : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             dark.color = new Color(255, 255, 255, count);
             dark1.color = new Color(255, 255, 255, count);
-
         }
     }
 }
