@@ -24,9 +24,12 @@ public class music_player : MonoBehaviour
 
         playLayer = LayerMask.NameToLayer("player");
         platformLayer = LayerMask.NameToLayer("Platform");
+<<<<<<< HEAD
 
         Fri = GetComponent<SpriteRenderer>();
 
+=======
+>>>>>>> parent of 1ccd2e2 (해결..?)
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class music_player : MonoBehaviour
         if (rb.velocity.y < 0)
         {
             Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down,1, LayerMask.GetMask("Platform"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
             if (rayHit.collider != null)
             {
                 if (rayHit.distance < 0.3f)
@@ -61,17 +64,28 @@ public class music_player : MonoBehaviour
         else
             Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
 
-    }
+        if (rb.velocity.y > 0)
+            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
+        else
+            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
+            
+        }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Finish")
             uigameClear.SetActive(true);
+<<<<<<< HEAD
 
         if (collision.gameObject.tag == "coin")
             Fri.sprite = sprites[1];
     }
+=======
+        }
+
+        }
+
+
+>>>>>>> parent of 1ccd2e2 (해결..?)
 }
-
-
 

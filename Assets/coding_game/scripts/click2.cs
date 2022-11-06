@@ -2,28 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomBox : MonoBehaviour
+public class click2 : MonoBehaviour
 {
+    public GameObject player,GameObject,camera2;
     // Start is called before the first frame update
-    public GameObject box,eft;
-    public Randomeffect effect;
-    public int dlswk;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void OnMouseDown()
     {
-        dlswk = Random.Range(0, 7);
-        box.SetActive(false);
-        eft.SetActive(true);
-        effect.Clickbox();
+        player.transform.position = GameObject.transform.position; 
+        camera2.SetActive(true);
     }
- 
 }

@@ -430,7 +430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 101432854}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &242156591
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +481,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 242156591}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!61 &242156594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -785,7 +795,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 330310174}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &354543141
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +946,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 403708526}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!61 &403708529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1316,7 +1336,6 @@ GameObject:
   - component: {fileID: 588062569}
   - component: {fileID: 588062568}
   - component: {fileID: 588062570}
-  - component: {fileID: 588062571}
   m_Layer: 8
   m_Name: Platform_Pink (3)
   m_TagString: coin
@@ -1332,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588062566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.05, y: -0.14, z: 0.6164398}
+  m_LocalPosition: {x: -1.05, y: -0.16, z: 0.6164398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 751862844}
@@ -1427,6 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 588062566}
 --- !u!50 &588062571
 Rigidbody2D:
@@ -1449,6 +1469,10 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+=======
+  blockExit: {fileID: 588062566}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &711878139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 1068533920}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &1113517937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,7 +2702,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 1328232196}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &1383221041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,7 +2830,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 1383221041}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &1386778234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,8 +3009,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveX: 0
+<<<<<<< HEAD
   moveY: 10
   jumpcount: 1
+=======
+  moveY: 0
+  jumpcount: 0
+>>>>>>> parent of 1ccd2e2 (해결..?)
   blockcount: 0
   jumpPower: 0
   uigameClear: {fileID: 329798148}
@@ -3715,6 +3759,7 @@ GameObject:
   - component: {fileID: 1664652536}
   - component: {fileID: 1664652535}
   - component: {fileID: 1664652537}
+  - component: {fileID: 1664652538}
   m_Layer: 8
   m_Name: Platform_Blue
   m_TagString: Untagged
@@ -3800,7 +3845,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010777593, y: -0.35632253}
+  m_Offset: {x: 0.010777593, y: 0.1508851}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3811,8 +3856,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4766753, y: 1.5833154}
+  m_Size: {x: 2.4766753, y: 0.5689001}
   m_EdgeRadius: 0
+--- !u!114 &1664652538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664652534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockExit: {fileID: 1664652534}
+  main: {fileID: 1386778240}
 --- !u!1 &1679149302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3994,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 1679149302}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!1 &1779689469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,7 +4435,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4051af3724f544ae1603cb4d6db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   block: {fileID: 0}
+=======
+  blockExit: {fileID: 2029547689}
+  main: {fileID: 1386778240}
+>>>>>>> parent of 1ccd2e2 (해결..?)
 --- !u!212 &2029547693
 SpriteRenderer:
   m_ObjectHideFlags: 0
