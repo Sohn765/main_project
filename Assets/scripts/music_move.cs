@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class music_move : MonoBehaviour
 {
-    Vector2 target = new Vector2(5, 10);
-    Vector2 target1 = new Vector2(-5, 10);
+    public float minX, maxX, startTime, moveSpeed;
+    private int sign = -1;
     
     private void Start()
     {
-       
+        
     }
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, 0.1f);
-        StartCoroutine("moving");
-       
+        if(Time.time >= startTime)
+        transform.position += new Vector3(moveSpeed * Time.deltaTime * sign, 0);
+
+        if (transform.position.x <= minX || transform.position.x >= maxX)
+            sign *= -1;
     }
 
-  
+
 
 
 }

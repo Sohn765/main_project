@@ -4,29 +4,22 @@ using UnityEngine;
 
 public class yap : MonoBehaviour
 {
-    public GameObject blockExit;
-    void Start()
+    public GameObject block;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+
     {
-        
+        Destroy (block);
+        StartCoroutine("exit");
+        print("Ri");
+ }
 
-    }
-
-    
-    void Update()
+    public IEnumerator exit()
     {
-        
+        yield return new WaitForSeconds(0.1f);
+        print("RIdk");
+        block.SetActive(true);
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            blockExit.SetActive(false);
-        }
-    }
-
-
-
 
 
 

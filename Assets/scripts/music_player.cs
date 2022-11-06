@@ -13,11 +13,19 @@ public class music_player : MonoBehaviour
     public GameObject uigameClear;
     public score main;
 
+    public Sprite[] sprites = new Sprite[0];
+     SpriteRenderer Fri;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         an = gameObject.GetComponent<Animator>();
+
+        playLayer = LayerMask.NameToLayer("player");
+        platformLayer = LayerMask.NameToLayer("Platform");
+
+        Fri = GetComponent<SpriteRenderer>();
 
     }
 
@@ -29,7 +37,7 @@ public class music_player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
         {
-            moveY = 13;
+            moveY = 10;
             rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
             jumpcount = 0;
         }
@@ -47,15 +55,21 @@ public class music_player : MonoBehaviour
                 }
             }
         }
+        
+        if (rb.velocity.y > 0)
+            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
+        else
+            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Finish")
-        {
             uigameClear.SetActive(true);
-        }
+
+        if (collision.gameObject.tag == "coin")
+            Fri.sprite = sprites[1];
     }
 }
 
