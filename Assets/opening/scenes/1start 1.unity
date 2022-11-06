@@ -1748,6 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036081653}
   - component: {fileID: 1036081652}
+  - component: {fileID: 1036081654}
   m_Layer: 0
   m_Name: startmgr
   m_TagString: Untagged
@@ -1767,9 +1768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840feab264314394f9b5abb9e4f98d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 1550044649}
-  button: {fileID: 1630626905}
-  text: {fileID: 1500170879}
 --- !u!4 &1036081653
 Transform:
   m_ObjectHideFlags: 0
@@ -1784,6 +1782,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1036081654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036081651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b1f8ca42acc4a4fb005933f3207dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1550044649}
+  button: {fileID: 1630626905}
+  text: {fileID: 1500170879}
 --- !u!1 &1036389194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,7 +3389,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1036081652}
+      - m_Target: {fileID: 1036081654}
         m_TargetAssemblyTypeName: Game_start, Assembly-CSharp
         m_MethodName: Fandebutton
         m_Mode: 1

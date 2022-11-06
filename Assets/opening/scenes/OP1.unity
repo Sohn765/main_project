@@ -2361,11 +2361,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1277915213}
   - component: {fileID: 1277915212}
-  - component: {fileID: 1277915214}
   - component: {fileID: 1277915216}
   - component: {fileID: 1277915215}
   - component: {fileID: 1277915217}
   - component: {fileID: 1277915218}
+  - component: {fileID: 1277915214}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Untagged
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277915211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d95dac2df73fa6141942f65e2f3ea803, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fd4ea8f4cdb18047be812c20544c7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Gmaemgr: {fileID: 1373788502}
@@ -3836,7 +3836,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1373788501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162a667af78631946ae884b1c5bc2f9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6104d6bbe8a049f47b28cfe5fd321cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   talkText: {fileID: 2051264357}
@@ -3896,7 +3896,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1373788501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d0917a28a12f64699c661e44843556, type: 3}
+  m_Script: {fileID: 11500000, guid: 55434cdaa02fc3043b403106e22aba5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Image: {fileID: 202375046}

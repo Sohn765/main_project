@@ -662,7 +662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!251 &113661128
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6327,12 +6326,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 334265334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3026440bca5e048b939eda98998b95, type: 3}
+  m_Script: {fileID: 11500000, guid: b65d08fde46786d47bd46557026e1cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveX: 0
   moveY: 0
-  Speed: 5
+  Speed: 7
   jumpcount: 1
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
@@ -7276,7 +7275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 603976662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49bdee815ea56584681e163148b707a6, type: 3}
+  m_Script: {fileID: 11500000, guid: b8987ede50ac28d4aa1b6fe648e60f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cut: {fileID: 622083347}
@@ -10263,7 +10262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!251 &1171191996
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -11355,7 +11353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!61 &1345485006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11589,7 +11586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1537296146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49bdee815ea56584681e163148b707a6, type: 3}
+  m_Script: {fileID: 11500000, guid: b8987ede50ac28d4aa1b6fe648e60f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cut: {fileID: 870461307}
@@ -11766,7 +11763,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1546536563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc832f8f7fcc55743b0c0c83d602020d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cda4771dd704d74e961d3affbf686bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1546536565
@@ -11828,7 +11825,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.25994474}
+  m_Offset: {x: 0, y: 0.23508099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11839,7 +11836,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5198895}
+  m_Size: {x: 1, y: 1.4701619}
   m_EdgeRadius: 0
 --- !u!212 &1562008137
 SpriteRenderer:
@@ -12397,7 +12394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!251 &1816924207
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -12945,7 +12941,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1918187746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b0937bd2be03b41a0e5d7eb4f84a7c, type: 3}
+  m_Script: {fileID: 11500000, guid: c9496f561a4a0c246be5cd7839b25db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GJ: {fileID: 1169406669}

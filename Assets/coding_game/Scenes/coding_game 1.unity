@@ -5775,12 +5775,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 334265334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3026440bca5e048b939eda98998b95, type: 3}
+  m_Script: {fileID: 11500000, guid: b65d08fde46786d47bd46557026e1cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveX: 0
   moveY: 0
-  Speed: 5
+  Speed: 7
   jumpcount: 1
   rb: {fileID: 334265335}
   sr: {fileID: 334265337}
@@ -5877,7 +5877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!251 &452072827
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6801,7 +6800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!4 &715642435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4161543100626038, guid: 6b13e8b5789585846a705035c6ad62cd, type: 3}
@@ -7668,7 +7666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!1 &1059183056
 GameObject:
   m_ObjectHideFlags: 0
@@ -7908,7 +7905,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!251 &1094096719
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7938,6 +7934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096541744}
   - component: {fileID: 1096541743}
+  - component: {fileID: 1096541745}
   m_Layer: 0
   m_Name: gamemgr
   m_TagString: Untagged
@@ -7971,6 +7968,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1096541745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096541742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1def571ef7ac9c84797d6943b8a30775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1112554202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8359,7 +8368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!4 &1232079086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4674869707922710, guid: 758b8713682e85f4180f6192cd0210fe, type: 3}
@@ -9279,7 +9287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0
 --- !u!1 &1542099222
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,7 +10102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1096541743}
+      - m_Target: {fileID: 1096541745}
         m_TargetAssemblyTypeName: coding_1_1, Assembly-CSharp
         m_MethodName: loading
         m_Mode: 1
@@ -10609,4 +10616,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779794816bb85140a96d89e88ea2adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCheck: 0

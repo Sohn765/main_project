@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/coding_game/Scenes/coding_game 2.unity
     guid: 1926b1ee03a259a41af62ee10bf8e45d
   - enabled: 1
+    path: Assets/coding_game/Scenes/coding_game 3.unity
+    guid: 125ee2f532e8dfd418fe475d133afa91
+  - enabled: 1
     path: Assets/mainmap/scenes/music.unity
     guid: bb381e0e1dd15d64ca5ea40312a23632
   - enabled: 1
