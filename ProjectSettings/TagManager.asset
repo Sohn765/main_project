@@ -10,6 +10,8 @@ TagManager:
   - key
   - outline
   - jumpPole
+  - potion
+  - key2
   layers:
   - Default
   - TransparentFX

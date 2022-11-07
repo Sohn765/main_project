@@ -9,8 +9,8 @@ public class player : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
     public int count , incount = 0;
-    public GameObject uiclear,fake,real,tlie,key, secretdoor;
-    public int gameclear,keyCount;
+    public GameObject uiclear,fake,real,tlie,key, secretdoor,key2;
+    public int gameclear,keyCount,key2Count;
     Rigidbody2D rigid;
     Animator animator;
 
@@ -78,7 +78,13 @@ public class player : MonoBehaviour
             Destroy(key);
             keyCount++;
         }
-        if(collision.gameObject.tag == "secretdoor" && keyCount == 1)
+        if (collision.gameObject.tag == "key2")
+        {
+            key2Count += 1;
+            Destroy(key2);
+
+        }
+        if (collision.gameObject.tag == "secretdoor" && keyCount == 1)
         {
             secretdoor.SetActive(false);
         }
