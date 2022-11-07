@@ -12,6 +12,13 @@ TagManager:
   - jumpPole
   - potion
   - key2
+  - real
+  - bang
+  - girl
+  - npc2
+  - gameplay
+  - npc1
+  - 2fgo
   layers:
   - Default
   - TransparentFX

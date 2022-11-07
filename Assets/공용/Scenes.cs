@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Scenes : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public int Scene;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void ScenesMove()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
+    }
+}

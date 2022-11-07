@@ -12,9 +12,8 @@ public class move : MonoBehaviour
     SpriteRenderer src;
 
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1;
-    public int talkend, npcCount, npcCount1, maintalkCount;
+    public int talkend, npcCount, npcCount1, maintalkCount, Scene;
     public Text text, text1;
-    public Main_talk1 main;
     public test talk;
 
 
@@ -52,7 +51,10 @@ public class move : MonoBehaviour
         {
             playgame.SetActive(true);
         }
-
+        if (collision.gameObject.tag == "2fgo")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
+        }
         if (collision.gameObject.tag == "npc1")
         {
             npc_Talk.SetActive(true);

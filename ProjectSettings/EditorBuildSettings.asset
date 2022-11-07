@@ -47,7 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/sound_game 1.unity
     guid: 99ad75dd44aa337488e94551f0093216
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/mainmap/scenes/coding_clear.unity
+    guid: c685390122941d944a2e0b4c571340c2
+  - enabled: 1
+    path: Assets/mainmap/scenes/com_out.unity
+    guid: ea8b9411f5d19934499e7c1fcff41f28
   m_configObjects: {}
