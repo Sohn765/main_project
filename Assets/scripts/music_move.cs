@@ -6,6 +6,7 @@ using UnityEngine;
 public class music_move : MonoBehaviour
 {
     public float minX, maxX, startTime, moveSpeed;
+   //  public GameObject player;
     private int sign = -1;
     
     private void Start()

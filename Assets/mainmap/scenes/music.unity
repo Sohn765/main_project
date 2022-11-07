@@ -647,23 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e355914f29ea44597829d9708ae345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
-  boy: {fileID: 1712112408}
-  girl: {fileID: 0}
-  mainTalk: {fileID: 125645080}
-  playgame: {fileID: 173501172}
-  talkmgr: {fileID: 399795518}
-  npc_Talk: {fileID: 0}
-  npc_Talk1: {fileID: 0}
-  boy1: {fileID: 582522146}
-  talkend: 0
-  npcCount: 0
-  npcCount1: 0
-  maintalkCount: 0
-  text: {fileID: 0}
-  text1: {fileID: 0}
-  main: {fileID: 0}
-  talk: {fileID: 1480677227}
 --- !u!95 &164023009
 Animator:
   serializedVersion: 3
@@ -761,15 +744,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ab3abef8d7ec94d82514a23b4aae09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  boy: {fileID: 0}
+  Speed: 3
+  boy: {fileID: 1712112408}
   girl: {fileID: 0}
-  mainTalk: {fileID: 0}
-  playgame: {fileID: 0}
-  talkmgr: {fileID: 0}
+  mainTalk: {fileID: 125645080}
+  playgame: {fileID: 173501172}
+  talkmgr: {fileID: 399795518}
   npc_Talk: {fileID: 0}
   npc_Talk1: {fileID: 0}
-  boy1: {fileID: 0}
+  boy1: {fileID: 582522146}
   talkend: 0
   npcCount: 0
   npcCount1: 0
@@ -1138,7 +1121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 353827626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a82d377e9853f4ea8a1f1cdd1afb17, type: 3}
+  m_Script: {fileID: 11500000, guid: e2d8252c26511c249b8f83a628169440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &353827628
@@ -1200,10 +1183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac4f3b26183854cb6c26719049e56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 0}
+  Text: {fileID: 2125440395}
   talkcount: 0
   main: {fileID: 164023012}
-  girlgirl: {fileID: 0}
+  girlgirl: {fileID: 850198654}
   AudioSource: {fileID: 164023005}
   talk: {fileID: 0}
 --- !u!61 &399795521
@@ -4116,7 +4099,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480677228}
-  - component: {fileID: 1480677227}
   m_Layer: 0
   m_Name: gma..
   m_TagString: Untagged
@@ -4124,22 +4106,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1480677227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480677226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f55fa79e3a2de44f879b80ca181a090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tx: {fileID: 0}
-  main_tx: {fileID: 0}
-  m_text: 
-  mv: {fileID: 0}
 --- !u!4 &1480677228
 Transform:
   m_ObjectHideFlags: 0

@@ -9,12 +9,12 @@ public class music_player : MonoBehaviour
     public float jumpPower;
     Rigidbody2D rb;
     Animator an;
-    int playLayer, platformLayer;
     public GameObject uigameClear;
     public score main;
+    public AudioSource AudioSource;
 
-    public Sprite[] sprites = new Sprite[0];
-    SpriteRenderer Fri;
+   // public Sprite[] sprites = new Sprite[0];
+   // SpriteRenderer Fri;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +22,8 @@ public class music_player : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         an = gameObject.GetComponent<Animator>();
 
-        playLayer = LayerMask.NameToLayer("player");
-        platformLayer = LayerMask.NameToLayer("Platform");
 
-
-        Fri = GetComponent<SpriteRenderer>();
+       // Fri = GetComponent<SpriteRenderer>();
     }
 
 
@@ -38,7 +35,8 @@ public class music_player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
             {
-                moveY = 10;
+               AudioSource.Play();
+                moveY = 11;
                 rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
                 jumpcount = 0;
             }
@@ -57,16 +55,7 @@ public class music_player : MonoBehaviour
                 }
             }
 
-            if (rb.velocity.y > 0)
-                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
-            else
-                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
-
-            if (rb.velocity.y > 0)
-                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
-            else
-                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
-
+            
         }
 
         void OnCollisionEnter2D(Collision2D collision)
@@ -75,8 +64,8 @@ public class music_player : MonoBehaviour
                 uigameClear.SetActive(true);
 
 
-            if (collision.gameObject.tag == "coin")
-                Fri.sprite = sprites[1];
+           // if (collision.gameObject.tag == "coin")
+              //  Fri.sprite = sprites[1];
         }
 
 
