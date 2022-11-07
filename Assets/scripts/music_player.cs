@@ -27,7 +27,7 @@ public class music_player : MonoBehaviour
 
 
         Fri = GetComponent<SpriteRenderer>();
-
+    }
 
 
         // Update is called once per frame
@@ -81,7 +81,7 @@ public class music_player : MonoBehaviour
 
 
     }
-}
+
 
 
 

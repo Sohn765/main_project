@@ -9,7 +9,7 @@ public class player : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr,dark, dark1;
     public int count , incount = 0;
-    public GameObject uiclear,fake,real,tlie,key, secretdoor,key2;
+    public GameObject uiclear,fake,real,tlie,key, secretdoor,key2,hide;
     public int gameclear,keyCount,key2Count;
     Rigidbody2D rigid;
     Animator animator;
@@ -73,6 +73,7 @@ public class player : MonoBehaviour
             print("¥Î¡°");
             rb.AddForce(Vector2.up * jumpPoleForce, ForceMode2D.Impulse);
         }
+        
         if (collision.gameObject.tag == "key")
         {
             Destroy(key);
@@ -87,6 +88,11 @@ public class player : MonoBehaviour
         if (collision.gameObject.tag == "secretdoor" && keyCount == 1)
         {
             secretdoor.SetActive(false);
+        }
+        else if (collision.gameObject.tag == "secretdoor" && keyCount == 0)
+        {
+
+            hide.SetActive(true);
         }
         if (collision.gameObject.tag == "potion")
         {

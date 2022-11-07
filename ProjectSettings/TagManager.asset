@@ -19,6 +19,7 @@ TagManager:
   - gameplay
   - npc1
   - 2fgo
+  - hide
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class main_move : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
+    public GameObject menuSet;
 
 
 
@@ -34,10 +35,27 @@ public class main_move : MonoBehaviour
 
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+            }
+            else
+            {
+                menuSet.SetActive(true);
+            }
+                
+
+        }
     }
 
     
-
+    public void gameExit()
+    {
+        Application.Quit();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

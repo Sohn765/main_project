@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 164023006}
   - component: {fileID: 164023005}
   - component: {fileID: 164023008}
+  - component: {fileID: 164023012}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Untagged
@@ -748,6 +749,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164023012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164023004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ab3abef8d7ec94d82514a23b4aae09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  boy: {fileID: 0}
+  girl: {fileID: 0}
+  mainTalk: {fileID: 0}
+  playgame: {fileID: 0}
+  talkmgr: {fileID: 0}
+  npc_Talk: {fileID: 0}
+  npc_Talk1: {fileID: 0}
+  boy1: {fileID: 0}
+  talkend: 0
+  npcCount: 0
+  npcCount1: 0
+  maintalkCount: 0
+  Scene: 0
+  text: {fileID: 0}
+  text1: {fileID: 0}
+  talk: {fileID: 0}
 --- !u!1 &173501172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,9 +1202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
   talkcount: 0
-  main: {fileID: 0}
+  main: {fileID: 164023012}
   girlgirl: {fileID: 0}
-  AudioSource: {fileID: 0}
+  AudioSource: {fileID: 164023005}
   talk: {fileID: 0}
 --- !u!61 &399795521
 BoxCollider2D:

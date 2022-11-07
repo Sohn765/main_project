@@ -5780,7 +5780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveX: 0
   moveY: 0
-  Speed: 7
+  Speed: 5
   jumpcount: 1
   jumpPoleForce: 0
   rb: {fileID: 334265335}
