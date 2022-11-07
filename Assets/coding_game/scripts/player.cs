@@ -82,6 +82,10 @@ public class player : MonoBehaviour
         {
             secretdoor.SetActive(false);
         }
+        if (collision.gameObject.tag == "potion")
+        {
+            StartCoroutine(speedUp());
+        }
 
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -119,6 +123,12 @@ public class player : MonoBehaviour
         }
     }
 
+    IEnumerator speedUp()
+    {
+        yield return new WaitForSeconds(1f);
+        Speed = 5;
+
+    }
     IEnumerator fadedark()
     {
         print("½ÇÇà!");

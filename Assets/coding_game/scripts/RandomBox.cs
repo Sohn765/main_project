@@ -8,6 +8,7 @@ public class RandomBox : MonoBehaviour
     public GameObject box,eft;
     public Randomeffect effect;
     public int dlswk;
+
     void Start()
     {
 
@@ -18,12 +19,12 @@ public class RandomBox : MonoBehaviour
     {
 
     }
-    private void OnMouseDown()
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
         dlswk = Random.Range(0, 7);
         box.SetActive(false);
         eft.SetActive(true);
         effect.Clickbox();
     }
- 
 }
