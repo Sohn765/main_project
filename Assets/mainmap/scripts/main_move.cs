@@ -55,7 +55,7 @@ public class main_move : MonoBehaviour
         }
         if (collision.gameObject.tag == "musicGo")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(11);
         }
 
     }

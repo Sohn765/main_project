@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2474c853762e274781addc1a49e0cee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3fadcec3cdb13f4d8517e56c8591cec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5795,9 +5795,10 @@ MonoBehaviour:
   tlie: {fileID: 0}
   key: {fileID: 0}
   secretdoor: {fileID: 0}
+  key2: {fileID: 0}
   gameclear: 6
   keyCount: 0
-  jumpPole: {fileID: 0}
+  key2Count: 0
 --- !u!4 &334628917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4469930281996236, guid: 63c74e18159d5cf4a8bce25adca0f18b, type: 3}
@@ -7819,7 +7820,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 08026adc3c65b0c4c9c615b98c850d0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f4612b0f6b02a442ab415ca20fb635f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

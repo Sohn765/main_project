@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class music_player : MonoBehaviour
 {
-    public float moveX, moveY, jumpcount, blockcount=0;
+    public float moveX, moveY, jumpcount, blockcount = 0;
     public float jumpPower;
     Rigidbody2D rb;
     Animator an;
@@ -14,7 +14,7 @@ public class music_player : MonoBehaviour
     public score main;
 
     public Sprite[] sprites = new Sprite[0];
-     SpriteRenderer Fri;
+    SpriteRenderer Fri;
 
     // Start is called before the first frame update
     void Start()
@@ -25,51 +25,61 @@ public class music_player : MonoBehaviour
         playLayer = LayerMask.NameToLayer("player");
         platformLayer = LayerMask.NameToLayer("Platform");
 
+
         Fri = GetComponent<SpriteRenderer>();
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        moveX = Input.GetAxisRaw("Horizontal");
-        an.SetFloat("jump", Mathf.Abs(moveY));
 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
+        // Update is called once per frame
+        void Update()
         {
-            moveY = 10;
-            rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
-            jumpcount = 0;
-        }
+            moveX = Input.GetAxisRaw("Horizontal");
+            an.SetFloat("jump", Mathf.Abs(moveY));
 
-        if (rb.velocity.y < 0)
-        {
-            Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down,1, LayerMask.GetMask("Platform"));
-            if (rayHit.collider != null)
+            if (Input.GetKeyDown(KeyCode.Space) && jumpcount == 1)
             {
-                if (rayHit.distance < 0.3f)
+                moveY = 10;
+                rb.AddForce(Vector2.up * moveY, ForceMode2D.Impulse);
+                jumpcount = 0;
+            }
+
+            if (rb.velocity.y < 0)
+            {
+                Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
+                RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+                if (rayHit.collider != null)
                 {
-                    jumpcount = 1;
-                    moveY = 0;
+                    if (rayHit.distance < 0.3f)
+                    {
+                        jumpcount = 1;
+                        moveY = 0;
+                    }
                 }
             }
+
+            if (rb.velocity.y > 0)
+                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
+            else
+                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
+
+            if (rb.velocity.y > 0)
+                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
+            else
+                Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
+
         }
-        
-        if (rb.velocity.y > 0)
-            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, true);
-        else
-            Physics2D.IgnoreLayerCollision(playLayer, platformLayer, false);
 
-    }
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Finish")
+                uigameClear.SetActive(true);
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Finish")
-            uigameClear.SetActive(true);
 
-        if (collision.gameObject.tag == "coin")
-            Fri.sprite = sprites[1];
+            if (collision.gameObject.tag == "coin")
+                Fri.sprite = sprites[1];
+        }
+
+
     }
 }
 
