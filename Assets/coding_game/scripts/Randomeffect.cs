@@ -8,7 +8,8 @@ public class Randomeffect : MonoBehaviour
     public Sprite[] sprites = new Sprite[0];
     SpriteRenderer src;
     public RandomBox box;
-    public GameObject player,point0 ,point1,point2,point3,point5,point6,gpdl,camera1;
+    public GameObject player,point0 ,point1,point2,point3,point5,point6,gpdl,camera1,nokey;
+    public int keyCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,17 @@ public class Randomeffect : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (box.dlswk == 0)
         {
-            point0.SetActive(true);
+            if (keyCount != 0)
+            {
+                nokey.SetActive(true);
+            }
+            else
+            {
+                point0.SetActive(true);
+                keyCount++;
+            }
+            
+       
         }
         else if (box.dlswk == 1)
         {
