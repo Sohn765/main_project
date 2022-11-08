@@ -52,10 +52,7 @@ public class main_move : MonoBehaviour
     }
 
     
-    public void gameExit()
-    {
-        Application.Quit();
-    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

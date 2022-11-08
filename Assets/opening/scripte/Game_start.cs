@@ -7,7 +7,9 @@ public class Game_start : MonoBehaviour
 {
     public Image image;
     public GameObject button;
-    public GameObject text;
+    public GameObject text,SaveLoad;
+
+
     void Start()
     {
         
@@ -19,12 +21,32 @@ public class Game_start : MonoBehaviour
         
     }
 
-    public void Fandebutton()
+    public void LoadScene()
     {
         print("버튼클릭");
+        if (!PlayerPrefs.HasKey("PlayerX"))
+        {
+
+            FadeButton();
+        }
+        else
+        {
+            SaveLoad.SetActive(true);
+        }
+        
+    }
+    public void FadeButton()
+    {
+        if (SaveLoad.activeSelf)
+        {
+            SaveLoad.SetActive(false);
+        }
         button.SetActive(false);
         text.SetActive(false);
+        PlayerPrefs.DeleteAll();
         StartCoroutine(FadeCoroutine());
+
+
     }
     IEnumerator FadeCoroutine()
     {

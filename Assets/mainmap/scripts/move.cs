@@ -11,7 +11,7 @@ public class move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
 
-    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1;
+    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1, menuSet;
     public int talkend, npcCount, npcCount1, maintalkCount, Scene;
     public Text text, text1;
     public test talk;
@@ -36,6 +36,20 @@ public class move : MonoBehaviour
         animator.SetFloat("moveY", moveY);
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+            }
+            else
+            {
+                menuSet.SetActive(true);
+            }
+
+
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
