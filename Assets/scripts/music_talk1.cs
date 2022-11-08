@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Main_talk2 : MonoBehaviour
+public class music_talk1 : MonoBehaviour
 {
     public Text Text;
     public int talkcount;
@@ -16,7 +16,7 @@ public class Main_talk2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Text.text = "어땠어?";
+        Text.text = "쉬웠지?";
         talkcount = 0;
     }
 
@@ -25,23 +25,23 @@ public class Main_talk2 : MonoBehaviour
         if (main.maintalkCount == 1 && talkcount == 0)
         {
             AudioSource.Play();
-            Text.text = "나 신경 쓰지 말고 말해";
+            Text.text = "어땠어?";
             talkcount++;
         }
         else if (talkcount == 1)
         {
             AudioSource.Play();
             main.boy.SetActive(true);
-            main.girl.SetActive(false);
-            Text.text = "꽤 괜찮았어 하지만...";
+            main.boy1.SetActive(false);
+            Text.text = "사운드 게임이라 사운드는 좋은데...";
             talkcount++;
         }
         else if (talkcount == 2)
         {
             AudioSource.Play();
             main.boy.SetActive(false);
-            main.girl.SetActive(true);
-            Text.text = "하지만?";
+            main.boy1.SetActive(true);
+            Text.text = "응 그리고?";
             talkcount++;
         }
         else if (talkcount == 3)
@@ -49,56 +49,57 @@ public class Main_talk2 : MonoBehaviour
 
             AudioSource.Play();
             main.boy.SetActive(true);
-            main.girl.SetActive(false);
-            Text.text = "생각보다 잔 오류가 많아";
+            main.boy1.SetActive(false);
+            Text.text = "점수 카운트 되는 부분이 너무 아쉬운 것 같아";
             talkcount++;
         }
         else if (talkcount == 4)
         {
             AudioSource.Play();
             main.boy.SetActive(false);
-            main.girl.SetActive(true);
-            Text.text = "음... 그렇구나 다른 건?";
+            main.boy1.SetActive(true);
+            Text.text = "그건 나도 알고 있어서 고치려고 다른 건?";
             talkcount++;
         }
         else if (talkcount == 5)
         {
             AudioSource.Play();
             main.boy.SetActive(true);
-            main.girl.SetActive(false);
-            Text.text = "다른 거? 뭔가 중력이랑 움직임이 따로 노는 거? 두개 빼곤 다 좋았어";
+            main.boy1.SetActive(false);
+            Text.text = "사운드 게임이라는 느낌이 조금 약한 것 같아";
             talkcount++;
         }
         else if (talkcount == 6)
         {
             AudioSource.Play();
             main.boy.SetActive(false);
-            main.girl.SetActive(true);
-            Text.text = "흠... 그렇군 알았어! 우리 프로젝트를 만들 땐 주의해 볼게";
+            main.boy1.SetActive(true);
+            Text.text = "그렇구나 우리 프로젝트 만들 때엔 참고할게";
             talkcount++;
         }
         else if (talkcount == 7)
         {
             AudioSource.Play();
             main.boy.SetActive(true);
-            main.girl.SetActive(false);
-            Text.text = "고마워 그럼 난 다른 애들이랑 좀 얘기하고 올게";
+            main.boy1.SetActive(false);
+            Text.text = "응 나는 다른 애들 찾으러 가 볼게";
             talkcount++;
         }
         else if (talkcount == 8)
         {
             AudioSource.Play();
             main.boy.SetActive(false);
-            main.girl.SetActive(true);
-            Text.text = "알았어";
+            main.boy1.SetActive(true);
+            Text.text = "응 잘 가";
             talkcount++;
         }
         else if (talkcount == 9)
         {
             main.boy.SetActive(false);
-            main.girl.SetActive(false);
+            main.boy1.SetActive(false);
             main.mainTalk.SetActive(false);
             main.talkmgr.SetActive(false);
+            main.talkend = 1;
             girlgirl.isTrigger = true;
         }
 
@@ -117,3 +118,5 @@ public class Main_talk2 : MonoBehaviour
         }
     }
 }
+
+
