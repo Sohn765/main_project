@@ -20,6 +20,12 @@ TagManager:
   - npc1
   - 2fgo
   - hide
+  - warning11
+  - warning
+  - musicGo
+  - computerGo
+  - 3floorGo
+  - computerClear
   layers:
   - Default
   - TransparentFX

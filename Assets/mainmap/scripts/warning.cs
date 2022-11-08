@@ -35,9 +35,14 @@ public class warning : MonoBehaviour
             M.SetActive(true);
             text.text = "잠긴 것 같다";
         }
-
-       
+        if (collision.gameObject.tag == "computerClear")
+        {
+            W.SetActive(true);
+            M.SetActive(true);
+            text.text = "이미 들린 곳이다";
         }
+
+    }
 
 
     

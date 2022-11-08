@@ -6803,7 +6803,7 @@ MonoBehaviour:
   npcCount: 0
   npcCount1: 0
   maintalkCount: 0
-  Scene: 15
+  Scene: 14
   text: {fileID: 70732172}
   text1: {fileID: 1343139378}
   talk: {fileID: 1310991945}

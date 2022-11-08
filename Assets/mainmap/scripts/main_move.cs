@@ -72,6 +72,7 @@ public class main_move : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(11);
         }
+       
 
     }
 }
