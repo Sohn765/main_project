@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class music_player : MonoBehaviour
 {
-    public float moveX, moveY, jumpcount, blockcount = 0;
+    public float moveX, moveY, jumpcount , blockcount = 0;
     public float jumpPower;
     Rigidbody2D rb;
     Animator an;
@@ -21,7 +21,7 @@ public class music_player : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         an = gameObject.GetComponent<Animator>();
-
+        jumpcount = 1;
 
        // Fri = GetComponent<SpriteRenderer>();
     }
