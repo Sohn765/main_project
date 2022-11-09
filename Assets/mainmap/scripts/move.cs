@@ -17,9 +17,9 @@ public class move : MonoBehaviour
     public test talk;
 
 
-
     void Start()
     {
+        
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
@@ -29,16 +29,19 @@ public class move : MonoBehaviour
 
     void Update()
     {
+       
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(moveX*Speed,moveY*Speed);
         animator.SetFloat("moveX", Mathf.Abs(moveX));
         animator.SetFloat("moveY", moveY);
+        
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
 
         if (Input.GetButtonDown("Cancel"))
         {
+            
             if (menuSet.activeSelf)
             {
                 menuSet.SetActive(false);
@@ -56,6 +59,7 @@ public class move : MonoBehaviour
         
         if(collision.gameObject.tag == "girl")
         {
+            
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);

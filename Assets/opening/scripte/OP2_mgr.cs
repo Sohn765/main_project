@@ -13,8 +13,10 @@ public class OP2_mgr : MonoBehaviour
     Animator Animator;
     bool check;
     public int runcheckX, runcheckY,lookCount;
+    public AudioSource audioSource, surprise;
     void Start()
     {
+        audioSource.Play();
         rb = gameObject.GetComponent<Rigidbody2D>();
         speedX = rb.velocity.x;
         speedY = -1.5f;
@@ -25,6 +27,7 @@ public class OP2_mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (speedY != 0) runcheckY = 1;
         else runcheckY = 0;
         if (speedX != 0) runcheckX = 1;
@@ -38,27 +41,35 @@ public class OP2_mgr : MonoBehaviour
     {
         if (collision.gameObject.tag == "stop")
         {
+            
             runcheckX = 0;
             speedY = rb.velocity.y;
+        
             talk.text = "확실히 방과후라 그런지 사람이 없네";
+            audioSource.Stop();
             show.SetActive(true);
             talkmgr.SetActive(true);
+            audioSource.Play();
         }
         else if(collision.gameObject.tag == "find")
         {
+            audioSource.Play();
             speedX = rb.velocity.x;
             Animator.SetFloat("right", Mathf.Abs(speedX));
             why.SetActive(true);
             StartCoroutine(wait());
+            audioSource.Stop();
             
         }
         else if (collision.gameObject.tag == "poster")
         {
+            audioSource.Play();
             speedX = 1;
             show.SetActive(true);
             talkmgr.SetActive(true);
             talk.text = "아 게임 프로젝트를 하네?";
             Animator.SetFloat("stop", 1);
+            audioSource.Stop();
         }
     }
     IEnumerator wait()
@@ -67,10 +78,14 @@ public class OP2_mgr : MonoBehaviour
         check = true;
         if (check == true)
         {
+            audioSource.Stop();
+            surprise.Play();
             why.SetActive(false);
             show.SetActive(true);
             talkmgr.SetActive(true);
             talk.text = "어! 저게 뭐지?";
+            audioSource.Play();
         }
     }
+    
 }

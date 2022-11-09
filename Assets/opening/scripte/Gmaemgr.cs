@@ -9,7 +9,7 @@ public class Gmaemgr : MonoBehaviour
     public OP_playerMove move;
     public GameObject zz;
     public int clickcount,playSound, speed;
-    public AudioSource bellsound,clicksound;
+    public AudioSource bellsound,clicksound, AudioSource;
     void Start()
     {
         clickcount = 0;
@@ -26,7 +26,7 @@ public class Gmaemgr : MonoBehaviour
     }
     void setactive()
     {
-
+        AudioSource.Stop();
         zz.SetActive(true);
         talkText.text = "아... 내일 점심은 먹을 게 없네 자판기나 가야겠다";
         clickcount++;
@@ -37,6 +37,8 @@ public class Gmaemgr : MonoBehaviour
 
         if (clickcount == 1)
         {
+            
+            AudioSource.Play();
             clicksound.Play();
             zz.SetActive(false);
             move.moveY = -1;
