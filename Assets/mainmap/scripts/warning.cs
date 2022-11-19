@@ -37,9 +37,17 @@ public class warning : MonoBehaviour
         }
         if (collision.gameObject.tag == "computerClear")
         {
-            W.SetActive(true);
-            M.SetActive(true);
-            text.text = "이미 들린 곳이다";
+            int coding_game = PlayerPrefs.GetInt("codingGameClear_count");
+            if (coding_game == 1)
+            {
+                W.SetActive(true);
+                M.SetActive(true);
+                text.text = "이미 들린 곳이다";
+                return;
+            }
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+
+
         }
 
     }
