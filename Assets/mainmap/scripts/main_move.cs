@@ -12,7 +12,8 @@ public class main_move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
     public GameObject menuSet;
-
+    public AudioSource audioSource;
+    bool ismoving = false;
 
 
     void Start()
@@ -46,9 +47,22 @@ public class main_move : MonoBehaviour
             {
                 menuSet.SetActive(true);
             }
-                
-
         }
+
+        if (rb.velocity.x != 0)
+            ismoving = true;
+        else
+            ismoving = false;
+
+
+        if (ismoving)
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+        else
+            audioSource.Stop();
+
     }
 
     

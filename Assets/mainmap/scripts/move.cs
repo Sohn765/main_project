@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class move : MonoBehaviour
 {
     public float Speed;
-    float moveX,moveY;
+    float moveX, moveY;
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
 
-    public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1, menuSet;
+    public GameObject boy, girl, mainTalk, playgame, talkmgr, npc_Talk, npc_Talk1, boy1, menuSet;
     public int talkend, npcCount, npcCount1, maintalkCount, Scene;
     public Text text, text1;
     public test talk;
-
-
+    public AudioSource audioSource;
+    bool ismoving = false;
     void Start()
     {
-        
+
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
@@ -29,19 +29,19 @@ public class move : MonoBehaviour
 
     void Update()
     {
-       
+
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(moveX*Speed,moveY*Speed);
+        rb.velocity = new Vector2(moveX * Speed, moveY * Speed);
         animator.SetFloat("moveX", Mathf.Abs(moveX));
         animator.SetFloat("moveY", moveY);
-        
+
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
 
         if (Input.GetButtonDown("Cancel"))
         {
-            
+
             if (menuSet.activeSelf)
             {
                 menuSet.SetActive(false);
@@ -51,8 +51,22 @@ public class move : MonoBehaviour
                 menuSet.SetActive(true);
             }
 
-
         }
+        if (rb.velocity.x != 0)
+            ismoving = true;
+        else
+            ismoving = false;
+
+        if (ismoving)
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+        else
+            audioSource.Stop();
+
+
+    
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

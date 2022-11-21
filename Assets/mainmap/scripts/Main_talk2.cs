@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Main_talk2 : MonoBehaviour
 {
     public Text Text;
-    public int talkcount;
+    public int talkcount, gameCount;
     public move main;
     public BoxCollider2D girlgirl;
     public AudioSource AudioSource;
     public test talk;
-
+    public GameSave GameSave;
 
     // Start is called before the first frame update
     private void Start()
@@ -100,6 +100,18 @@ public class Main_talk2 : MonoBehaviour
             main.mainTalk.SetActive(false);
             main.talkmgr.SetActive(false);
             girlgirl.isTrigger = true;
+            if (!PlayerPrefs.HasKey("GameClear_count"))
+            {
+                gameCount = 1;
+            }
+            else
+            {
+                gameCount = PlayerPrefs.GetInt("GameClear_count");
+                gameCount += 1;
+            }
+            PlayerPrefs.SetInt("codingGameClear_count", 1);
+            PlayerPrefs.SetInt("GameClear_count", gameCount);
+            GameSave.progres();
         }
 
         if (main.npcCount == 1)
