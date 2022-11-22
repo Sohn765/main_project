@@ -58,7 +58,7 @@ public class music_talk1 : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.boy1.SetActive(true);
-            Text.text = "그건 나도 알고 있어서 고치려고 다른 건?";
+            Text.text = "오 그렇구나 다른 건?";
             talkcount++;
         }
         else if (talkcount == 5)
@@ -74,7 +74,7 @@ public class music_talk1 : MonoBehaviour
             AudioSource.Play();
             main.boy.SetActive(false);
             main.boy1.SetActive(true);
-            Text.text = "그렇구나 우리 프로젝트 만들 때엔 참고할게";
+            Text.text = "그렇구나 확실히 나랑 보는 눈이 다르네 고마워";
             talkcount++;
         }
         else if (talkcount == 7)

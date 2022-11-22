@@ -10,6 +10,7 @@ public class talkmgr : MonoBehaviour
     public OP2_mgr mv;
     public int talkcount;
     public AudioSource talksource;
+    public OP2_mgr oP2_Mgr;
     void Start()
     {
         talkcount = 0;
@@ -30,6 +31,7 @@ public class talkmgr : MonoBehaviour
             mv.talkmgr.SetActive(false);
             mv.speedX = 3;
             talkcount++;
+            oP2_Mgr.audioSource.Play();
         }
         else if (talkcount == 1)
         {
@@ -39,6 +41,7 @@ public class talkmgr : MonoBehaviour
             mv.speedX = mv.rb.velocity.x;
             mv.speedY = 1;
             talkcount++;
+            oP2_Mgr.audioSource.Play();
         }
         else if (talkcount == 2)
         {

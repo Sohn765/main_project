@@ -12,7 +12,7 @@ public class main_move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
     public GameObject menuSet;
-
+    AudioSource audioSource;
 
 
     void Start()
@@ -20,6 +20,7 @@ public class main_move : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
 
@@ -32,7 +33,6 @@ public class main_move : MonoBehaviour
         animator.SetFloat("moveY", moveY);
         if (Input.GetKeyDown(KeyCode.LeftShift)) Speed = 10;
         if (Input.GetKeyUp(KeyCode.LeftShift)) Speed = 4;
-
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
 
@@ -46,12 +46,9 @@ public class main_move : MonoBehaviour
             {
                 menuSet.SetActive(true);
             }
-                
-
         }
     }
 
-    
 
 
     private void OnCollisionEnter2D(Collision2D collision)

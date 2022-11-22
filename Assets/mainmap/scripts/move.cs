@@ -10,7 +10,7 @@ public class move : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
-
+    public AudioSource Audio;
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1, menuSet;
     public int talkend, npcCount, npcCount1, maintalkCount, Scene;
     public Text text, text1;
@@ -19,7 +19,7 @@ public class move : MonoBehaviour
 
     void Start()
     {
-        
+        Time.timeScale = 1;
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
@@ -59,11 +59,11 @@ public class move : MonoBehaviour
         
         if(collision.gameObject.tag == "girl")
         {
-            
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);
             maintalkCount+=1;
+            Audio.Stop();
         }
         if (collision.gameObject.tag == "gameplay" && talkend == 1)
         {

@@ -2332,6 +2332,7 @@ MonoBehaviour:
   mv: {fileID: 1627119848}
   talkcount: 0
   talksource: {fileID: 1627119852}
+  oP2_Mgr: {fileID: 1627119848}
 --- !u!1 &1627119845
 GameObject:
   m_ObjectHideFlags: 0
