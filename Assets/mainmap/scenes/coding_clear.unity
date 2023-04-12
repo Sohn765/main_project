@@ -2556,7 +2556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1445543879}
   window: {fileID: 1375162575}
-  value: {fileID: 980294055}
   Secne: 13
   saveCount: 0
   Slider: {fileID: 1628486661}
@@ -5325,7 +5324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &980294056
 RectTransform:
   m_ObjectHideFlags: 0

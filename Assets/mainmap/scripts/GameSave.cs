@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameSave : MonoBehaviour
 {
-    public GameObject player,window,value;
+    public GameObject player,window;
     public int Secne, saveCount;
     public Slider Slider;
     public Text progres_text;
@@ -60,7 +60,6 @@ public class GameSave : MonoBehaviour
         }
         if (coding_game == 1)
         {
-            value.SetActive(true);
             progres_text.text = "20%";
             Slider.value = 0.2f;
         }

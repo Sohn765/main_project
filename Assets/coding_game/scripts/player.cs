@@ -13,7 +13,6 @@ public class player : MonoBehaviour
     public int gameclear,keyCount,key2Count;
     Rigidbody2D rigid;
     Animator animator;
-    public AudioSource coin;
 
 
 
@@ -65,7 +64,6 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.tag == "coin")
         {
-            coin.Play();
             count+=1;
             print("ÄÚÀÎ");
 

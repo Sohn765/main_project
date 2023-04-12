@@ -11,7 +11,11 @@ public class move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
 <<<<<<< HEAD
+<<<<<<< HEAD
     public AudioSource Audio;
+=======
+
+>>>>>>> parent of 85f1fdd (수정본)
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1, menuSet;
 =======
 
@@ -25,10 +29,14 @@ public class move : MonoBehaviour
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         Time.timeScale = 1;
 =======
 
 >>>>>>> 96d6392bdb715ac90d5eae4cceee995281b5045c
+=======
+        
+>>>>>>> parent of 85f1fdd (수정본)
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
@@ -82,11 +90,11 @@ public class move : MonoBehaviour
         
         if(collision.gameObject.tag == "girl")
         {
+            
             mainTalk.SetActive(true);
             boy.SetActive(false);
             talkmgr.SetActive(true);
             maintalkCount+=1;
-            Audio.Stop();
         }
         if (collision.gameObject.tag == "gameplay" && talkend == 1)
         {

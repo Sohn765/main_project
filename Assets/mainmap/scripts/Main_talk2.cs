@@ -18,7 +18,6 @@ public class Main_talk2 : MonoBehaviour
     {
         Text.text = "¾î¶®¾î?";
         talkcount = 0;
-        Time.timeScale = 1;
     }
 
     private void OnMouseDown()

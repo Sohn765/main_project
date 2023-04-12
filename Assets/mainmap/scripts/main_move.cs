@@ -13,11 +13,15 @@ public class main_move : MonoBehaviour
     SpriteRenderer src;
     public GameObject menuSet;
 <<<<<<< HEAD
+<<<<<<< HEAD
     AudioSource audioSource;
 =======
     public AudioSource audioSource;
     bool ismoving = false;
 >>>>>>> 96d6392bdb715ac90d5eae4cceee995281b5045c
+=======
+
+>>>>>>> parent of 85f1fdd (수정본)
 
 
     void Start()
@@ -25,7 +29,6 @@ public class main_move : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();
-        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
 
@@ -38,6 +41,7 @@ public class main_move : MonoBehaviour
         animator.SetFloat("moveY", moveY);
         if (Input.GetKeyDown(KeyCode.LeftShift)) Speed = 10;
         if (Input.GetKeyUp(KeyCode.LeftShift)) Speed = 4;
+
         if (moveX == -1) src.flipX = false;
         if (moveX == 1) src.flipX = true;
 
@@ -51,6 +55,8 @@ public class main_move : MonoBehaviour
             {
                 menuSet.SetActive(true);
             }
+                
+
         }
 
         if (rb.velocity.x != 0)
@@ -69,6 +75,7 @@ public class main_move : MonoBehaviour
 
     }
 
+    
 
 
     private void OnCollisionEnter2D(Collision2D collision)

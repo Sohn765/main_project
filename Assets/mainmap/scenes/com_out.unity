@@ -3619,9 +3619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cd9cc15b901e44eb465ddcc538a227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1510959476}
+  player: {fileID: 0}
   window: {fileID: 361695281}
-  value: {fileID: 772170985}
   Secne: 13
   saveCount: 0
   Slider: {fileID: 486756317}

@@ -143,7 +143,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> parent of 85f1fdd (수정본)
 --- !u!224 &52468472
 =======
   m_IsActive: 1
@@ -7101,9 +7105,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   player: {fileID: 1510959476}
+=======
+  player: {fileID: 0}
+>>>>>>> parent of 85f1fdd (수정본)
   window: {fileID: 1563475761}
-  value: {fileID: 52468471}
   Secne: 13
   saveCount: 0
   Slider: {fileID: 392789278}

@@ -27,6 +27,7 @@ public class OP2_mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (speedY != 0) runcheckY = 1;
         else runcheckY = 0;
         if (speedX != 0) runcheckX = 1;
@@ -43,10 +44,12 @@ public class OP2_mgr : MonoBehaviour
             
             runcheckX = 0;
             speedY = rb.velocity.y;
+        
             talk.text = "확실히 방과후라 그런지 사람이 없네";
             audioSource.Stop();
             show.SetActive(true);
             talkmgr.SetActive(true);
+            audioSource.Play();
         }
         else if(collision.gameObject.tag == "find")
         {
@@ -71,16 +74,17 @@ public class OP2_mgr : MonoBehaviour
     }
     IEnumerator wait()
     {
+        yield return new WaitForSeconds(1.0f);
         check = true;
         if (check == true)
         {
             audioSource.Stop();
             surprise.Play();
-            yield return new WaitForSeconds(1.0f);
             why.SetActive(false);
             show.SetActive(true);
             talkmgr.SetActive(true);
             talk.text = "어! 저게 뭐지?";
+            audioSource.Play();
         }
     }
     
