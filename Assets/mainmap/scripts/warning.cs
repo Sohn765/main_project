@@ -39,12 +39,12 @@ public class warning : MonoBehaviour
         }
         if (collision.gameObject.tag == "computerClear")
         {
-<<<<<<< HEAD
+
             audioSource.Play();
-            W.SetActive(true);
+            W.SetActive(true)       ;
             M.SetActive(true);
             text.text = "이미 들린 곳이다";
-=======
+
             int coding_game = PlayerPrefs.GetInt("codingGameClear_count");
             if (coding_game == 1)
             {
@@ -56,7 +56,7 @@ public class warning : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene(6);
 
 
->>>>>>> 587035bfff0573d04ce81471de233ea8f1d2274e
+
         }
 
     }

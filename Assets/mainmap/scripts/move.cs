@@ -10,17 +10,15 @@ public class move : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer src;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     public AudioSource Audio;
-=======
 
->>>>>>> parent of 85f1fdd (수정본)
+
+
     public GameObject boy,girl,mainTalk,playgame,talkmgr, npc_Talk, npc_Talk1,boy1, menuSet;
-=======
 
-    public GameObject boy, girl, mainTalk, playgame, talkmgr, npc_Talk, npc_Talk1, boy1, menuSet;
->>>>>>> 96d6392bdb715ac90d5eae4cceee995281b5045c
+
+
     public int talkend, npcCount, npcCount1, maintalkCount, Scene;
     public Text text, text1;
     public test talk;
@@ -28,15 +26,9 @@ public class move : MonoBehaviour
     bool ismoving = false;
     void Start()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Time.timeScale = 1;
-=======
 
->>>>>>> 96d6392bdb715ac90d5eae4cceee995281b5045c
-=======
-        
->>>>>>> parent of 85f1fdd (수정본)
+        Time.timeScale = 1;
+
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         src = gameObject.GetComponent<SpriteRenderer>();

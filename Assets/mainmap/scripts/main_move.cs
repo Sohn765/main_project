@@ -12,16 +12,12 @@ public class main_move : MonoBehaviour
     Animator animator;
     SpriteRenderer src;
     public GameObject menuSet;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    AudioSource audioSource;
-=======
-    public AudioSource audioSource;
-    bool ismoving = false;
->>>>>>> 96d6392bdb715ac90d5eae4cceee995281b5045c
-=======
 
->>>>>>> parent of 85f1fdd (수정본)
+    AudioSource audioSource;
+
+
+    bool ismoving = false;
+
 
 
     void Start()
